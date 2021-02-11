@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import wrapper from '../reducers/configureStore';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Navigation from '../components/Navigation';
