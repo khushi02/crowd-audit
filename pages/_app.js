@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import App, { Container } from 'next/app';
+import wrapper from '../reducers/configureStore';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -20,13 +21,13 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <Container>
+      <Fragment>
         <Navigation />
         <Component {...pageProps} />
         <Footer />
-      </Container>
+      </Fragment>
     );
   }
 }
 
-export default MyApp;
+export default wrapper.withRedux(MyApp);
