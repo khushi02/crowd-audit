@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Navigation from '../components/Navigation';
+import ProjectList from '../components/ProjectList';
 import Footer from '../components/Footer';
 
 class Gallery extends Component {
@@ -9,6 +10,7 @@ class Gallery extends Component {
       <div>
         <Navigation />
         <p>Projects gallery page.</p>
+        <ProjectList />
         <Footer />
       </div>
     );

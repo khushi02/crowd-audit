@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 // Connect to MongoDB
 mongoose.connect(
-    keys.mongoURL,
+    keys.mongoURI,
     { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
