@@ -8,10 +8,8 @@ class Gallery extends Component {
   render() {
     return (
       <div>
-        <Navigation />
         <p>Projects gallery page.</p>
         <ProjectList />
-        <Footer />
       </div>
     );
   }
