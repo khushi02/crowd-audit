@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
 import Carousel from "react-bootstrap/Carousel";
 import styles from "./index.module.scss";
 
@@ -9,7 +6,6 @@ class Index extends Component {
   render() {
     return (
       <div>
-        <Navigation />
         <div className={styles.contentWrap}>
           <div className={styles.coloredBackground}>
             <Carousel>
@@ -126,7 +122,6 @@ class Index extends Component {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

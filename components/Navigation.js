@@ -30,18 +30,13 @@ class Navigation extends React.Component {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <a className="nav-link" href="/gallery">
                 Projects
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/">
                 About Us
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/">
-                Projects
               </a>
             </li>
             <li className="nav-item">
