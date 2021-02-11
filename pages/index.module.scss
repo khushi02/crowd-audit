@@ -37,12 +37,13 @@
 }
 
 .coloredBackground {
-  height: 440px;
+  height: 70%;
   background-color: rgb(239, 243, 241);
 }
 
 .nonColoredBackground {
-  height: 440px;
+  height: 70%;
+  margin-top: 2%;
 }
 
 .landingContainer2 {
@@ -63,4 +64,9 @@
   padding-top: 40px;
   margin-left: 20px;
   margin-right: 60px;
+}
+
+.img {
+  max-height: 40%;
+  width: auto;
 }
