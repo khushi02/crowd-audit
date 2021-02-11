@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "server": "npm run dev --prefix server",
+    "client": "next dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "next build",
     "start": "next start"
   },

@@ -5,7 +5,7 @@ const ImageSchema = require('./Image');
 const projectSchema = new Schema({
     title: String,
     description: String,
-    algorithm: String,
+    thumbnail: Array,
     images: [ImageSchema],
     // thumbnail: 
     // discussions: 
