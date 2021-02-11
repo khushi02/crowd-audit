@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "http-proxy-middleware": "^1.0.6",
     "materialize-css": "^1.0.0-rc.2",
     "next": "^10.0.0",
     "node-sass": "^5.0.0",
