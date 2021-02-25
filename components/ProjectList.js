@@ -21,6 +21,18 @@ const test = [
     title: "Improving Location-Based Biases in Tesla's Self Driving Mode",
     description: "Tesla vehicles are changing to safe mode driving when driving in the red zone areas. Crowd Auditing could help identify risks and improve road safety in general.",
     thumbnail: "/projects/project3.jpeg"
+  },
+  {
+    id: 4,
+    title: "Help improve Google's Computer Vision for Minorities",
+    description: "Google Computer Vision is extensively used around the globe to understand images. Crowd Auditing could help uncover hidden misclassifications that impact underrepresented communities.",
+    thumbnail: "/projects/project4.jpeg"
+  },
+  {
+    id: 5,
+    title: "Gender Biases in YouTube Ads",
+    description: "YouTube advertising allows for your video content to be advertised on YouTube in order to ensure you can maximize your user reach. Auditing ads could be useful in understanding which ads are potentially harmfully biased.",
+    thumbnail: "/projects/project5.jpeg"
   }
 ];
 
@@ -28,9 +40,9 @@ class ProjectList extends Component {
   renderProjects() {
     return test.map(project => (
       <div key={project.id} className={`card ${styles.cardContainer} mb-3`}>
-        <div className="row g-0">
-          <div className="col-md-2">
-            <img className={styles.cardImage} src={project.thumbnail}></img>
+        <div className="row" style={{height: "100%", margin: "0 0"}}>
+          <div className="col-md-2" style={{position: "relative"}}>
+            <img className={`${styles.centerItem} ${styles.cardImage}`} src={project.thumbnail}></img>
           </div>
           <div className="col-md-8">
             <div className="card-body">
@@ -38,8 +50,8 @@ class ProjectList extends Component {
               <p className="card-text">{project.description}</p>
             </div>
           </div>
-          <div className={`col-md-2 ${styles.buttonContainer}`}>
-            <a href="#" className={`btn ${styles.cardButton}`}>View Project</a>
+          <div className="col-md-2" style={{position: "relative"}}>
+            <a href={`/project/${project.id}`} className={`btn ${styles.centerItem} ${styles.cardButton}`}>View Project</a>
           </div>
         </div>
       </div>
@@ -48,8 +60,8 @@ class ProjectList extends Component {
 
   render() {
     return (
-      <div>
-        {this.renderProjects()};
+      <div className={styles.listContainer}>
+        {this.renderProjects()}
       </div>
     );
   }
