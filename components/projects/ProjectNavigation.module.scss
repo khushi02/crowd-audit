@@ -1,0 +1,59 @@
+.centerItem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.leftCenterItem {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.navContainer {
+    height: 196px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    background: #FAFAFA;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.cardBody {
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+.cardButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    background: #128F6E;
+    border-color: #128F6E;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 36px;
+    color: #FAFAFA;
+}
+
+.cardButton:hover {
+    background: #128F6E;
+    border-color: #128F6E;
+}
+
+.navButton {
+    margin: 0 15%;
+}
+
+.navButton:hover, .navButton:active:focus, .navButton:focus {
+    text-decoration: underline;
+    text-decoration-color: #128F6E;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+}

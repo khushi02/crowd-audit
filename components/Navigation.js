@@ -30,7 +30,7 @@ class Navigation extends React.Component {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/projects">
+              <a className="nav-link" href="/gallery">
                 Projects
               </a>
             </li>
