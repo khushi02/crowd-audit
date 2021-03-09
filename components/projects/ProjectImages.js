@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import data from '../../public/projects/data'
+import { Image } from 'react-bootstrap';
+import styles from './ProjectImages.module.scss';
+import data from '../../public/projects/data';
 
 class ProjectImages extends Component {
   constructor(props) {
@@ -9,10 +11,27 @@ class ProjectImages extends Component {
     }
   }
 
+  renderImages() {
+    const images = [];
+    for (let i = 0; i < 100; i++) {
+      images.push(
+        <div className={styles.image} key={`img-${i}`}>
+          <Image src={this.state.project.thumbnail} rounded fluid />
+        </div>
+      );
+    }
+    return images;
+  }
+
   render() {
     return (
       <div style={{ margin: '8% 9%' }}>
-        <p>This is the images page for the project - {this.state.project.title}</p>
+        <div style={{ marginBottom: '80px' }}>
+          <h5 style={{ fontSize: '16px' }}>2234 images under this project</h5>
+          <div className={styles.imageContainer}>
+            {this.renderImages()}
+          </div>
+        </div>
       </div>
     );
   }
