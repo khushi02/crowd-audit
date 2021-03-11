@@ -1,8 +1,30 @@
 import React, { Component } from "react";
 import styles from "./audit.module.scss";
 import LabelList from "../components/LabelList";
+import FormControl from "react-bootstrap/FormControl";
 
 class Index extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "React"
+    };
+    this.onChangeValue = this.onChangeValue.bind(this);
+    this.textInput1 = React.createRef();
+    this.textInput2 = React.createRef();
+  }
+
+  onChangeValue(event) {
+    console.log(event.target.value);
+  }
+
+  handleChange1() {
+    const value = this.textInput1.current.value;
+  }
+  handleChange2() {
+    const value = this.textInput2.current.value;
+  }
+
   render() {
     return (
       <div>
@@ -43,13 +65,39 @@ class Index extends Component {
                   <br />
                   <br />
                   <h5 className={styles.question}>
-                    Do any labels for this image seem biased or discriminatory
-                    in a way that negatively impacts any group of people?
+                    How harmful do you think the selected classification(s) are?
                   </h5>
-                  <p className={styles.arrow}>&lt;-- Select labels to report</p>
+                  <div onChange={this.onChangeValue}>
+                    <input type="radio" value="Low" name="gender" /> Low
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="radio" value="Moderate" name="gender" />{" "}
+                    Moderate &nbsp;&nbsp;&nbsp;
+                    <input type="radio" value="Extreme" name="gender" /> Extreme
+                  </div>
+                  <br />
+                  <div>
+                    <FormControl
+                      ref={this.textInput1}
+                      type="text"
+                      placeholder="Describe your rating"
+                      onChange={() => this.handleChange1()}
+                    />
+                  </div>
+                  <br />
+                  <div>
+                    <FormControl
+                      ref={this.textInput2}
+                      type="text"
+                      placeholder="Which group of people does it negatively impact?"
+                      onChange={() => this.handleChange2()}
+                    />
+                  </div>
+                  <br />
+                  <br />
+                  <br />
                   <div className={`col-md-2 ${styles.buttonContainer}`}>
                     <a href="#" className={`btn ${styles.cardButton}`}>
-                      Skip to Next Image
+                      Submit Audit
                     </a>
                   </div>
                 </div>
