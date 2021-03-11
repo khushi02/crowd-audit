@@ -46,7 +46,7 @@ class Index extends Component {
                     Do any labels for this image seem biased or discriminatory
                     in a way that negatively impacts any group of people?
                   </h5>
-                  <p className={styles.arrow}>&lt;-- Select Labels to report</p>
+                  <p className={styles.arrow}>&lt;-- Select labels to report</p>
                   <div className={`col-md-2 ${styles.buttonContainer}`}>
                     <a href="#" className={`btn ${styles.cardButton}`}>
                       Skip to Next Image

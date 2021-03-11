@@ -94,6 +94,7 @@ class Index extends Component {
                   </div>
                   <br />
                   <br />
+                  <br />
                   <div className={`col-md-2 ${styles.buttonContainer}`}>
                     <a href="#" className={`btn ${styles.cardButton}`}>
                       Submit Audit
