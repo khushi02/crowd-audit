@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Link from 'next/link';
 import { withRouter } from 'next/router';
 import styles from "./audit.module.scss";
 import LabelList from "../components/LabelList";
@@ -39,7 +40,7 @@ class AuditSelect extends Component {
               understand images. Crowd Auditing could help uncover hidden
               misclassifications that impact underrepresented communities.
             </p>
-            <div class="card">
+            <div className="card">
               <div className={styles.landingContainer1}>
                 <div className={styles.auditBarLeft}>
                   <p className={styles.auditBarText}>
@@ -47,19 +48,19 @@ class AuditSelect extends Component {
                   </p>
                 </div>
               </div>
-              <div class="row no-gutters">
-                <div class="col-auto">
+              <div className="row no-gutters">
+                <div className="col-auto">
                   <img src="/gluegun.png" alt="img" />
                 </div>
-                <div class="col bg-light px-4">
+                <div className="col bg-light px-4">
                   <br />
                   <h5>Labels</h5>
                   <br />
                   <LabelList selectedLabel={this.props.router.query.label} />
                 </div>
-                <div class="col-sm-6 px-5">
+                <div className="col-sm-6 px-5">
                   <br />
-                  <p class="card-title">
+                  <p className="card-title">
                     Google's algorithm scans the images to generate labels that
                     describe the whole image.
                   </p>
@@ -97,9 +98,11 @@ class AuditSelect extends Component {
                   <br />
                   <br />
                   <div className={`col-md-2 ${styles.buttonContainer}`}>
-                    <a href="#" className={`btn ${styles.cardButton}`}>
-                      Submit Audit
-                    </a>
+                    <Link href="/audit_submitted">
+                      <div className={`btn ${styles.cardButton}`}>
+                        Submit Audit
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </div>

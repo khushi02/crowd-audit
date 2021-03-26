@@ -18,19 +18,20 @@ const labels = [
 
 class LabelList extends Component {
   renderLabel(label) {
+    let style = styles.auditLabel;
     if (this.props.selectedLabel === label) {
-      return (
-        <Badge className={styles.selectedLabels} pill>
-          {label}
-        </Badge>
-      );
+      style += ` ${styles.selectedLabel}`;
     }
-    return <div className={styles.auditLabels}>{label}</div>;
+    return (
+      <div>
+        <Badge className={style}>{label}</Badge>
+      </div>
+    );
   }
 
   renderLabels() {
-    return labels.map(label => (
-      <Link href={`/audit_select?label=${label}`}>
+    return labels.map((label, i) => (
+      <Link href={`/audit_select?label=${label}`} key={`label-${i}`}>
         {this.renderLabel(label)}
       </Link>
     ));

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Link from 'next/link';
 import styles from "./audit.module.scss";
 import Button from "react-bootstrap/Button";
 
@@ -16,7 +17,7 @@ class Index extends Component {
               understand images. Crowd Auditing could help uncover hidden
               misclassifications that impact underrepresented communities.
             </p>
-            <div class="card">
+            <div className="card">
               <div className={styles.landingContainer1}>
                 <div className={styles.auditBarLeft}>
                   <p className={styles.auditBarText}>
@@ -24,16 +25,16 @@ class Index extends Component {
                   </p>
                 </div>
               </div>
-              <div class="row no-gutters">
-                <div class="col-auto">
+              <div className="row no-gutters">
+                <div className="col-auto">
                   <img src="/gluegun.png" alt="img" />
                 </div>
-                <div class="col-sm-7 px-5">
+                <div className="col-sm-7 px-5">
                   <br />
                   <h5 className={styles.question}>
                     Your audit has been submitted.
                   </h5>
-                  <p class="card-title">
+                  <p className="card-title">
                     Thank you. Your audits are helping Google's system be more
                     inclusive!
                   </p>
@@ -71,9 +72,11 @@ class Index extends Component {
                     <div className={styles.auditRecords}>
                       <p>Learn more about what others say about this </p>
                       <div className={styles.buttonContainer}>
-                        <a href="#" className={`btn ${styles.cardButton}`}>
-                          Audit Records
-                        </a>
+                        <Link href="/records">
+                          <div className={`btn ${styles.cardButton}`}>
+                            Audit Records
+                          </div>
+                        </Link>
                       </div>
                     </div>
                     <div></div>
