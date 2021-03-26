@@ -68,3 +68,65 @@
   line-height: 36px;
   color: #fafafa;
 }
+
+.internalContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: auto;
+}
+
+.labelsCol1 {
+  grid-template: 1;
+  text-align: left;
+  padding-top: 40px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.labelsCol2 {
+  grid-template: 2;
+  text-align: left;
+  padding-top: 40px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.button[disabled="disabled"],
+.labelButton:disabled {
+  background: #d2e2d9;
+  border-color: #d2e2d9;
+  color: black;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.buttonsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  vertical-align: bottom;
+}
+
+.auditRecords {
+  grid-template: 1;
+  text-align: left;
+  padding-top: 40px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.nextImage {
+  grid-template: 3;
+  padding-top: 40px;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.nextImage img {
+  width: 200px;
+  height: auto;
+  padding-bottom: 5%;
+}
