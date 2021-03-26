@@ -81,7 +81,7 @@ class Index extends Component {
                       <img src="/nextImage.png" alt="img" />
                       <div className={styles.buttonContainer}>
                         <a href="#" className={`btn ${styles.cardButton}`}>
-                          Audit Records
+                          Audit Next Image
                         </a>
                       </div>
                     </div>
