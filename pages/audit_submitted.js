@@ -3,27 +3,6 @@ import styles from "./audit.module.scss";
 import Button from "react-bootstrap/Button";
 
 class Index extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: "React"
-    };
-    this.onChangeValue = this.onChangeValue.bind(this);
-    this.textInput1 = React.createRef();
-    this.textInput2 = React.createRef();
-  }
-
-  onChangeValue(event) {
-    console.log(event.target.value);
-  }
-
-  handleChange1() {
-    const value = this.textInput1.current.value;
-  }
-  handleChange2() {
-    const value = this.textInput2.current.value;
-  }
-
   render() {
     return (
       <div>
