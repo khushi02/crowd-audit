@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import { withRouter } from 'next/router';
 import styles from "./audit.module.scss";
 import LabelList from "../components/LabelList";
 import FormControl from "react-bootstrap/FormControl";
 
-class Index extends Component {
+class AuditSelect extends Component {
   constructor() {
     super();
     this.state = {
@@ -54,7 +55,7 @@ class Index extends Component {
                   <br />
                   <h5>Labels</h5>
                   <br />
-                  <LabelList />
+                  <LabelList selectedLabel={this.props.router.query.label} />
                 </div>
                 <div class="col-sm-6 px-5">
                   <br />
@@ -110,4 +111,4 @@ class Index extends Component {
   }
 }
 
-export default Index;
+export default withRouter(AuditSelect);

@@ -23,5 +23,6 @@
     "react-materialize": "^3.9.6",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5"
-  }
+  },
+  "devDependencies": {}
 }
