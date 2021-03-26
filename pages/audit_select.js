@@ -98,7 +98,7 @@ class AuditSelect extends Component {
                   <br />
                   <br />
                   <div className={`col-md-2 ${styles.buttonContainer}`}>
-                    <Link href="/audit_submitted">
+                    <Link href="/audit_submitted" >
                       <div className={`btn ${styles.cardButton}`}>
                         Submit Audit
                       </div>

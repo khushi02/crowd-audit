@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Link from 'next/link';
+import Link from 'next/link'
 import styles from "./audit.module.scss";
 import Button from "react-bootstrap/Button";
 
-class Index extends Component {
+class AuditSubmitted extends Component {
   render() {
     return (
       <div>
@@ -83,9 +83,17 @@ class Index extends Component {
                     <div className={styles.nextImage}>
                       <img src="/nextImage.png" alt="img" />
                       <div className={styles.buttonContainer}>
+<<<<<<< HEAD
                         <a href="#" className={`btn ${styles.cardButton}`}>
                           Audit Next Image
                         </a>
+=======
+                        <Link href="/records">
+                          <div className={`btn ${styles.cardButton}`}>
+                            Audit Records
+                          </div>
+                        </Link>
+>>>>>>> a0437c0 (Link up pages)
                       </div>
                     </div>
                   </div>
@@ -99,4 +107,4 @@ class Index extends Component {
   }
 }
 
-export default Index;
+export default AuditSubmitted;

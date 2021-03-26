@@ -18,13 +18,15 @@ const labels = [
 
 class LabelList extends Component {
   renderLabel(label) {
-    let style = styles.auditLabel;
+    let style = styles.auditLabels;
     if (this.props.selectedLabel === label) {
-      style += ` ${styles.selectedLabel}`;
+      style = styles.selectedLabels;
     }
     return (
       <div>
-        <Badge className={style}>{label}</Badge>
+        <Badge className={style} pill>
+          {label}
+        </Badge>
       </div>
     );
   }
