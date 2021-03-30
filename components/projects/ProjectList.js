@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { fetchProjects } from '../../actions';
 import Link from 'next/link';
 import styles from "./ProjectList.module.scss";
 import data from '../../public/projects/data';
@@ -38,6 +36,4 @@ class ProjectList extends Component {
   }
 }
 
-const mapStateToProps = ({ projects }) => ({ projects });
-
-export default connect(mapStateToProps, { fetchProjects })(ProjectList);
+export default ProjectList;

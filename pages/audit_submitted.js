@@ -83,17 +83,11 @@ class AuditSubmitted extends Component {
                     <div className={styles.nextImage}>
                       <img src="/nextImage.png" alt="img" />
                       <div className={styles.buttonContainer}>
-<<<<<<< HEAD
-                        <a href="#" className={`btn ${styles.cardButton}`}>
-                          Audit Next Image
-                        </a>
-=======
                         <Link href="/records">
                           <div className={`btn ${styles.cardButton}`}>
                             Audit Records
                           </div>
                         </Link>
->>>>>>> a0437c0 (Link up pages)
                       </div>
                     </div>
                   </div>
