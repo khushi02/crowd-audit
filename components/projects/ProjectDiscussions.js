@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import data from '../../public/projects/data'
 
 class ProjectDiscussions extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       project: data[this.props.projectId - 1]
     }
@@ -14,8 +14,8 @@ class ProjectDiscussions extends Component {
       <div style={{ margin: '8% 9%' }}>
         <p>This is the discussions page for the project - {this.state.project.title}</p>
       </div>
-    );
+    )
   }
 }
 
-export default ProjectDiscussions;
+export default ProjectDiscussions

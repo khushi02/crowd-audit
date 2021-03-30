@@ -1,9 +1,9 @@
-import ProjectContent from '../components/projects/ProjectContent';
+import ProjectContent from '../components/projects/ProjectContent'
 
 const Project = () => (
-    <div>
-        <ProjectContent />
-    </div>
-);
+  <div>
+    <ProjectContent />
+  </div>
+)
 
-export default Project;
+export default Project

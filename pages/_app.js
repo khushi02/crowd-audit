@@ -1,33 +1,33 @@
-import React, { Fragment } from 'react';
-import App from 'next/app';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import React, { Fragment } from 'react'
+import App from 'next/app'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 class MyApp extends App {
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   static async getInitialProps({ Component, router, ctx }) {
-    let pageProps = {};
+    let pageProps = {}
     if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
+      pageProps = await Component.getInitialProps(ctx)
     }
     return { pageProps }
   }
 
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps } = this.props
     return (
       <Fragment>
         <Navigation />
         <Component {...pageProps} />
         <Footer />
       </Fragment>
-    );
+    )
   }
 }
 
-export default MyApp;
+export default MyApp

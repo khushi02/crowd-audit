@@ -1,9 +1,9 @@
-import ProjectList from '../components/projects/ProjectList';
+import ProjectList from '../components/projects/ProjectList'
 
 const Gallery = () => (
   <div>
     <ProjectList />
   </div>
-);
+)
 
-export default Gallery;
+export default Gallery
