@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => ({
     fontFamily: 'Roboto',
     fontSize: '1.167em',
     fontWeight: '500',
-    marginRight: '5em',
+    marginLeft: '5em',
     textTransform: 'none',
     '&:hover': {
       color: '#128F6E',

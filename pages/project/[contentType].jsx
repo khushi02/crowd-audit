@@ -7,7 +7,6 @@ import ProjectHeader from '../../components/organisms/ProjectHeader/ProjectHeade
 
 const ProjectPage = () => {
   const router = useRouter()
-  console.log(router)
   const contentType = router.query.contentType.toString()
   const getPageTemplate = () => {
     switch (contentType) {
@@ -29,10 +28,5 @@ const ProjectPage = () => {
     </>
   )
 }
-
-// export const getServerSideProps = async ({ params }) => {
-//   const contentType = params.contentType
-//   return { props: { contentType } }
-// }
 
 export default ProjectPage

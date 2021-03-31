@@ -3,14 +3,14 @@ import App from 'next/app'
 import { CssBaseline } from '@material-ui/core'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
-import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import PageNavigation from '../components/organisms/PageNavigation'
 
 const _App = ({ Component, pageProps }) => {
   return (
     <Fragment>
       <CssBaseline />
-      <Navigation />
+      <PageNavigation />
       <Component {...pageProps} />
       <Footer />
     </Fragment>
