@@ -4,6 +4,7 @@ import { Box, Grid, makeStyles } from '@material-ui/core'
 import ProjectData from '../../organisms/ProjectData'
 import ProjectDescription from '../../organisms/ProjectDescription'
 import ProjectHelp from '../../organisms/ProjectHelp'
+import ProjectMedia from '../../organisms/ProjectMedia'
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -28,6 +29,9 @@ const LearnPageTemplate = () => {
       <Grid className={classes.container} container>
         <ProjectHelp />
       </Grid>
+      <Box className={classes.container}>
+        <ProjectMedia />
+      </Box>
     </>
   )
 }
