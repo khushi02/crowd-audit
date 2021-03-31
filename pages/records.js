@@ -1,6 +1,6 @@
-import React from 'react';
-import RecordsPageTemplate from '../components/templates/RecordsPageTemplate';
+import React from 'react'
+import RecordsPageTemplate from '../components/templates/RecordsPageTemplate'
 
-const Records = () => <RecordsPageTemplate />;
+const Records = () => <RecordsPageTemplate />
 
-export default Records;
+export default Records

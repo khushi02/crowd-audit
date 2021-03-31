@@ -1,12 +1,9 @@
-import React from "react";
+import React from 'react'
 
 class Navigation extends React.Component {
   render() {
     return (
-      <nav
-        className="navbar navbar-expand-lg navbar-light"
-        style={{ backgroundColor: "#d2e2d9" }}
-      >
+      <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: '#d2e2d9' }}>
         <a className="navbar-brand" href="/">
           Crowd Audit
         </a>
@@ -30,7 +27,7 @@ class Navigation extends React.Component {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/gallery">
+              <a className="nav-link" href="/projects">
                 Projects
               </a>
             </li>
@@ -47,8 +44,8 @@ class Navigation extends React.Component {
           </ul>
         </div>
       </nav>
-    );
+    )
   }
 }
 
-export default Navigation;
+export default Navigation

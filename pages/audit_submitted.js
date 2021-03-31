@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 import Link from 'next/link'
-import styles from "./audit.module.scss";
-import Button from "react-bootstrap/Button";
+import styles from '../components/templates/AuditPageTemplate/audit.module.scss'
+import Button from 'react-bootstrap/Button'
 
 class AuditSubmitted extends Component {
   render() {
@@ -13,9 +13,8 @@ class AuditSubmitted extends Component {
             <h5>Help Improve Google's Computer Vision for Minorities</h5>
             <br />
             <p className={styles.projectDesc}>
-              Google Computer Vision is extensively used around the globe to
-              understand images. Crowd Auditing could help uncover hidden
-              misclassifications that impact underrepresented communities.
+              Google Computer Vision is extensively used around the globe to understand images. Crowd Auditing could
+              help uncover hidden misclassifications that impact underrepresented communities.
             </p>
             <div className="card">
               <div className={styles.landingContainer1}>
@@ -31,41 +30,36 @@ class AuditSubmitted extends Component {
                 </div>
                 <div className="col-sm-7 px-5">
                   <br />
-                  <h5 className={styles.question}>
-                    Your audit has been submitted.
-                  </h5>
-                  <p className="card-title">
-                    Thank you. Your audits are helping Google's system be more
-                    inclusive!
-                  </p>
+                  <h5 className={styles.question}>Your audit has been submitted.</h5>
+                  <p className="card-title">Thank you. Your audits are helping Google's system be more inclusive!</p>
                   <div className={styles.internalContainer}>
                     <div className={styles.labelsCol1}>
                       <p>Your Reported Labels</p>
                       <Button className={styles.labelButton} disabled>
                         GUN
-                      </Button>{" "}
+                      </Button>{' '}
                       <br />
                       <Button className={styles.labelButton} disabled>
                         CRIME
-                      </Button>{" "}
+                      </Button>{' '}
                     </div>
                     <div className={styles.labelsCol2}>
                       <p>Top Reported Labels</p>
                       <Button className={styles.labelButton} disabled>
                         GUN
-                      </Button>{" "}
+                      </Button>{' '}
                       <br />
                       <Button className={styles.labelButton} disabled>
                         CRIME
-                      </Button>{" "}
+                      </Button>{' '}
                       <br />
                       <Button className={styles.labelButton} disabled>
                         DANGER
-                      </Button>{" "}
+                      </Button>{' '}
                       <br />
                       <Button className={styles.labelButton} disabled>
                         BLACK
-                      </Button>{" "}
+                      </Button>{' '}
                     </div>
                   </div>
                   <div className={styles.buttonsContainer}>
@@ -73,9 +67,7 @@ class AuditSubmitted extends Component {
                       <p>Learn more about what others say about this </p>
                       <div className={styles.buttonContainer}>
                         <Link href="/records">
-                          <div className={`btn ${styles.cardButton}`}>
-                            Audit Records
-                          </div>
+                          <div className={`btn ${styles.cardButton}`}>Audit Records</div>
                         </Link>
                       </div>
                     </div>
@@ -84,9 +76,7 @@ class AuditSubmitted extends Component {
                       <img src="/nextImage.png" alt="img" />
                       <div className={styles.buttonContainer}>
                         <Link href="/records">
-                          <div className={`btn ${styles.cardButton}`}>
-                            Audit Records
-                          </div>
+                          <div className={`btn ${styles.cardButton}`}>Audit Records</div>
                         </Link>
                       </div>
                     </div>
@@ -97,8 +87,8 @@ class AuditSubmitted extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default AuditSubmitted;
+export default AuditSubmitted
