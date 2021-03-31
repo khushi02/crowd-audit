@@ -1,11 +1,14 @@
+import _ from 'lodash'
+
 import React, { Component } from 'react'
 import Link from 'next/link'
-import styles from './ProjectList.module.scss'
-import data from '../../public/projects/data'
 
-class ProjectList extends Component {
+import styles from './ProjectsPageTemplate.module.scss'
+import data from '../../../public/projects/data'
+
+class ProjectsPageTemplate extends Component {
   renderProjects() {
-    return data.map((project) => (
+    return _.map(data, (project) => (
       <div key={project.id} className={`card ${styles.cardContainer} mb-3`}>
         <div className="row" style={{ height: '100%', margin: '0 0' }}>
           <div className="col-md-2" style={{ position: 'relative' }}>
@@ -32,4 +35,4 @@ class ProjectList extends Component {
   }
 }
 
-export default ProjectList
+export default ProjectsPageTemplate

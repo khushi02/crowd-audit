@@ -37,7 +37,7 @@ const ProjectHeader = ({ contentType }) => {
     <Grid className={classes.container} container>
       <Grid item xs={6}>
         <Box className={classes.box} display="flex" justifyContent="flex-start">
-          <Link href="/gallery">
+          <Link href="/projects">
             <NavigateBeforeOutlined className={classes.navigateIcon} />
           </Link>
           <Box className={classes.titleBox}>
