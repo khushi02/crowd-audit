@@ -18,7 +18,7 @@ class ProjectList extends Component {
             </div>
           </div>
           <div className="col-md-2" style={{ position: 'relative' }}>
-            <Link href={`/project?id=${project.id}`}>
+            <Link href={`/project/learn`}>
               <a className={`btn ${styles.centerItem} ${styles.cardButton}`}>View Project</a>
             </Link>
           </div>

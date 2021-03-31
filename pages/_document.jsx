@@ -1,12 +1,29 @@
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheets } from '@material-ui/styles'
-import { ServerStyleSheet } from 'styled-components'
+import flush from 'styled-jsx/server'
 
 class _Document extends Document {
   static async getInitialProps(ctx) {
+    const materialSheets = new ServerStyleSheets()
+    const originalRenderPage = ctx.renderPage
+
+    ctx.renderPage = () =>
+      originalRenderPage({
+        enhanceApp: (App) => (props) => materialSheets.collect(<App {...props} />)
+      })
     const initialProps = await Document.getInitialProps(ctx)
-    return { ...initialProps }
+
+    return {
+      ...initialProps,
+      styles: (
+        <React.Fragment>
+          {initialProps.styles}
+          {materialSheets.getStyleElement()}
+          {flush() || null}
+        </React.Fragment>
+      )
+    }
   }
 
   render() {
