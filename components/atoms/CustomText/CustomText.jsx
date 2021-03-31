@@ -5,6 +5,7 @@ import { makeStyles, Typography } from '@material-ui/core'
 const useStyles = (fontSize, fontWeight) =>
   makeStyles(() => ({
     text: {
+      color: '#4F4F4F',
       fontFamily: 'Roboto',
       fontSize: fontSize,
       fontWeight: fontWeight

@@ -2,7 +2,6 @@ import _ from 'lodash'
 
 import React from 'react'
 import Link from 'next/link'
-
 import { Box, Grid } from '@material-ui/core'
 import { NavigateBeforeOutlined } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/styles'
