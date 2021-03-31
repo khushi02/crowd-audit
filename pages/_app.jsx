@@ -6,30 +6,20 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-class _App extends App {
-  constructor(props) {
-    super(props)
-  }
+const _App = ({ Component, pageProps }) => {
+  return (
+    <Fragment>
+      <CssBaseline />
+      <Navigation />
+      <Component {...pageProps} />
+      <Footer />
+    </Fragment>
+  )
+}
 
-  componentDidMount() {
-    const jssStyles = document.querySelector('#jss-server-side')
-    if (jssStyles) {
-      jssStyles.parentNode.removeChild(jssStyles)
-    }
-  }
-
-  render() {
-    const { Component, ...other } = this.props
-
-    return (
-      <Fragment>
-        <CssBaseline />
-        <Navigation />
-        <Component {...other} />
-        <Footer />
-      </Fragment>
-    )
-  }
+_App.getInitialProps = async (appContext) => {
+  const appProps = await App.getInitialProps(appContext)
+  return { ...appProps }
 }
 
 export default _App
