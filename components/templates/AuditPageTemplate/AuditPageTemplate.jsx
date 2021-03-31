@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import styles from './audit.module.scss'
-import LabelList from '../components/LabelList'
+import LabelList from '../../LabelList'
 
-class Index extends Component {
+class AuditPageTemplate extends Component {
   render() {
     return (
       <div>
@@ -60,4 +60,4 @@ class Index extends Component {
   }
 }
 
-export default Index
+export default AuditPageTemplate

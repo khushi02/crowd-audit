@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
 import { withRouter } from 'next/router'
-import styles from './audit.module.scss'
+import styles from '../components/templates/AuditPageTemplate/audit.module.scss'
 import LabelList from '../components/LabelList'
 import FormControl from 'react-bootstrap/FormControl'
 

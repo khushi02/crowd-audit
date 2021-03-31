@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 
+import AuditPageTemplate from '../../components/templates/AuditPageTemplate'
 import LearnPageTemplate from '../../components/templates/LearnPageTemplate'
 import ProjectHeader from '../../components/organisms/ProjectHeader/ProjectHeader'
 
@@ -12,7 +13,7 @@ const ProjectPage = () => {
       case 'learn':
         return <LearnPageTemplate />
       case 'audit':
-        return <LearnPageTemplate />
+        return <AuditPageTemplate />
       case 'label':
         return <LearnPageTemplate />
       case 'discuss':

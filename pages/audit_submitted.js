@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
-import styles from './audit.module.scss'
+import styles from '../components/templates/AuditPageTemplate/audit.module.scss'
 import Button from 'react-bootstrap/Button'
 
 class AuditSubmitted extends Component {
