@@ -15,9 +15,9 @@ const ProjectPage = () => {
       case 'audit':
         return <AuditPageTemplate />
       case 'label':
-        return <LearnPageTemplate />
+        return null
       case 'discuss':
-        return <LearnPageTemplate />
+        return null
     }
   }
 
@@ -27,11 +27,6 @@ const ProjectPage = () => {
       {getPageTemplate()}
     </>
   )
-}
-
-export const getServerSideProps = async ({ params }) => {
-  const contentType = params.contentType
-  return { props: { contentType } }
 }
 
 export default ProjectPage
