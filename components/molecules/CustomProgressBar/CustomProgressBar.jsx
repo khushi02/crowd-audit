@@ -30,12 +30,12 @@ const CustomProgressBar = ({ value }) => {
       <Grid className={classes.container} container>
         <Grid item xs={6}>
           <Box display="flex" justifyContent="flex-start">
-            <CustomText fontSize='1.167em' fontWeight='500' text={`${value}% complete`} />
+            <CustomText fontSize="1.167em" fontWeight="500" text={`${value}% complete`} />
           </Box>
         </Grid>
         <Grid item xs={6}>
           <Box display="flex" justifyContent="flex-end">
-            <CustomText fontSize='1.167em' fontWeight='500' text='Initiated on: January 2020' />
+            <CustomText fontSize="1.167em" fontWeight="500" text="Initiated on: January 2020" />
           </Box>
         </Grid>
       </Grid>

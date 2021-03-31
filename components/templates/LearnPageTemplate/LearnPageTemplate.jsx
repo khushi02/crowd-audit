@@ -1,8 +1,11 @@
+import _ from 'lodash'
+
 import React from 'react'
 import { Box, Grid, makeStyles } from '@material-ui/core'
 
 import CustomText from '../../atoms/CustomText'
 import CustomProgressBar from '../../molecules/CustomProgressBar'
+import StatPaper from '../../molecules/StatPaper/'
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -11,6 +14,14 @@ const useStyles = makeStyles(() => ({
   containerTop: {
     padding: '10em 5em 5em 5em'
   },
+  dataBox: {
+    paddingLeft: '10em',
+    paddingRight: '10em',
+    paddingTop: '5em'
+  },
+  descriptionTitle: {
+    marginBottom: '1em'
+  },
   gridItemLeft: {
     paddingRight: '10em'
   },
@@ -18,8 +29,6 @@ const useStyles = makeStyles(() => ({
     paddingLeft: '5em'
   },
   statBox: {
-    paddingLeft: '10em',
-    paddingRight: '10em',
     paddingTop: '5em'
   }
 }))
@@ -31,7 +40,9 @@ const LearnPageTemplate = () => {
     <>
       <Grid className={classes.containerTop} container>
         <Grid className={classes.gridItemLeft} item xs={6}>
-          <CustomText fontSize="1.667em" fontWeight="700" text="What is this project about?" />
+          <Box className={classes.descriptionTitle}>
+            <CustomText fontSize="1.667em" fontWeight="700" text="What is this project about?" />
+          </Box>
           <CustomText
             fontSize="1.333em"
             fontWeight="400"
@@ -39,7 +50,9 @@ const LearnPageTemplate = () => {
           />
         </Grid>
         <Grid className={classes.gridItemRight} item xs={6}>
-          <CustomText fontSize="1.667em" fontWeight="700" text="What will you see in this project?" />
+          <Box className={classes.descriptionTitle}>
+            <CustomText fontSize="1.667em" fontWeight="700" text="What will you see in this project?" />
+          </Box>
           <CustomText
             fontSize="1.333em"
             fontWeight="400"
@@ -49,8 +62,22 @@ const LearnPageTemplate = () => {
       </Grid>
       <Box className={classes.container} container>
         <CustomText fontSize="1.667em" fontWeight="700" text="Project Data" />
-        <Box className={classes.statBox}>
+        <Box className={classes.dataBox}>
           <CustomProgressBar value={45} />
+          <Box className={classes.statBox} display="flex" flexWrap="wrap" justifyContent="space-between">
+            {_.map(
+              [
+                { label: 'Auditors', value: 3490 },
+                { label: 'Labels', value: 98451 },
+                { label: 'Hypotheses Created', value: 450 },
+                { label: 'Images Audited', value: 2269 },
+                { label: 'Discussions Posted', value: 1569 }
+              ],
+              ({ label, value }) => (
+                <StatPaper label={label} value={value} />
+              )
+            )}
+          </Box>
         </Box>
       </Box>
     </>
