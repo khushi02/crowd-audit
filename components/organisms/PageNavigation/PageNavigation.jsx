@@ -21,11 +21,6 @@ const useStyles = makeStyles(() => ({
     '&:hover': {
       cursor: 'pointer'
     }
-  },
-  pageButton: {
-    '&:hover': {
-      color: '#128f6e'
-    }
   }
 }))
 
@@ -41,29 +36,22 @@ const PageNavigation = () => {
               <Image fluid src="/logo1.png" />
             </Link>
           </Box>
-          {_.map(['Projects', 'FAQ', 'About'], text => {
+          {_.map(['Projects', 'FAQ', 'About'], (text) => {
             const lowerCased = text.toLowerCase()
-            return (
-              <NavigationButton
-                key={`btn-${lowerCased}`}
-                link={`/${lowerCased}`}
-                text={text}
-                className={classes.pageButton}
-              />
-            )
+            return <NavigationButton key={`btn-${lowerCased}`} link={`/${lowerCased}`} text={text} />
           })}
         </Box>
       </Grid>
       <Grid item xs={6}>
         <Box className={classes.box} display="flex" justifyContent="flex-end">
-          {_.map(['Login', 'Register'], text => {
+          {_.map(['Login', 'Register'], (text) => {
             const lowerCased = text.toLowerCase()
             return (
               <NavigationButton
+                emphasized={text === 'Register'}
                 key={`btn-${lowerCased}`}
                 link={`/${lowerCased}`}
                 text={text}
-                emphasized={text === 'Register'}
               />
             )
           })}

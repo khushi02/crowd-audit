@@ -8,7 +8,7 @@ const reportedLabels = ['GUN', 'CRIME', 'DANGER', 'BLACK']
 
 class AuditSubmitted extends Component {
   renderYourLabels() {
-    return yourLabels.map(label => (
+    return yourLabels.map((label) => (
       <div>
         <Badge pill nav-stacked className={styles.reportedLabel}>
           {label}
@@ -18,7 +18,7 @@ class AuditSubmitted extends Component {
   }
 
   renderReportedLabels() {
-    return reportedLabels.map(label => (
+    return reportedLabels.map((label) => (
       <div>
         <Badge pill nav-stacked className={styles.reportedLabel}>
           {label}

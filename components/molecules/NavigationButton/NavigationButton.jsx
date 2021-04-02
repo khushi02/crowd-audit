@@ -8,7 +8,10 @@ const useStyles = makeStyles(() => ({
     fontSize: '1.167em',
     fontWeight: '400',
     marginLeft: '4.5em',
-    textTransform: 'none'
+    textTransform: 'none',
+    '&:hover': {
+      color: '#128F6E'
+    }
   },
   emphasized: {
     color: '#128F6E'
