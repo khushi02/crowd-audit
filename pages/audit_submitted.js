@@ -1,9 +1,32 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import Link from 'next/link'
 import styles from '../components/templates/AuditPageTemplate/audit.module.scss'
-import Button from 'react-bootstrap/Button'
+import { Badge } from 'react-bootstrap'
+
+const yourLabels = ['GUN', 'CRIME']
+const reportedLabels = ['GUN', 'CRIME', 'DANGER', 'BLACK']
 
 class AuditSubmitted extends Component {
+  renderYourLabels() {
+    return yourLabels.map(label => (
+      <div>
+        <Badge pill nav-stacked className={styles.reportedLabel}>
+          {label}
+        </Badge>
+      </div>
+    ))
+  }
+
+  renderReportedLabels() {
+    return reportedLabels.map(label => (
+      <div>
+        <Badge pill nav-stacked className={styles.reportedLabel}>
+          {label}
+        </Badge>
+      </div>
+    ))
+  }
+
   render() {
     return (
       <div>
@@ -35,31 +58,11 @@ class AuditSubmitted extends Component {
                   <div className={styles.internalContainer}>
                     <div className={styles.labelsCol1}>
                       <p>Your Reported Labels</p>
-                      <Button className={styles.labelButton} disabled>
-                        GUN
-                      </Button>{' '}
-                      <br />
-                      <Button className={styles.labelButton} disabled>
-                        CRIME
-                      </Button>{' '}
+                      <div>{this.renderYourLabels()}</div>
                     </div>
                     <div className={styles.labelsCol2}>
                       <p>Top Reported Labels</p>
-                      <Button className={styles.labelButton} disabled>
-                        GUN
-                      </Button>{' '}
-                      <br />
-                      <Button className={styles.labelButton} disabled>
-                        CRIME
-                      </Button>{' '}
-                      <br />
-                      <Button className={styles.labelButton} disabled>
-                        DANGER
-                      </Button>{' '}
-                      <br />
-                      <Button className={styles.labelButton} disabled>
-                        BLACK
-                      </Button>{' '}
+                      <div>{this.renderReportedLabels()}</div>
                     </div>
                   </div>
                   <div className={styles.buttonsContainer}>
@@ -67,7 +70,7 @@ class AuditSubmitted extends Component {
                       <p>Learn more about what others say about this </p>
                       <div className={styles.buttonContainer}>
                         <Link href="/records">
-                          <div className={`btn ${styles.cardButton}`}>Audit Records</div>
+                          <div className={`btn ${styles.cardButton}`}>See Audit Records</div>
                         </Link>
                       </div>
                     </div>
@@ -76,7 +79,7 @@ class AuditSubmitted extends Component {
                       <img src="/nextImage.png" alt="img" />
                       <div className={styles.buttonContainer}>
                         <Link href="/records">
-                          <div className={`btn ${styles.cardButton}`}>Audit Records</div>
+                          <div className={`btn ${styles.cardButton}`}>Audit Next Image</div>
                         </Link>
                       </div>
                     </div>
