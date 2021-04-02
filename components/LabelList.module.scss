@@ -1,5 +1,5 @@
-.auditLabels {
-  margin-left: -5px;
+.auditLabel {
+  margin-left: 2px;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.8;
@@ -12,4 +12,11 @@
 .selectedLabel {
   background: rgba(18, 143, 110, 0.15);
   border-radius: 20px;
+  font-size: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.selectedLabel:hover {
+  cursor: pointer;
 }

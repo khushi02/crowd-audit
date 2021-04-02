@@ -1,1 +1,1 @@
-export { default } from './RecordsPageTemplate';
+export { default } from './RecordsPageTemplate'
