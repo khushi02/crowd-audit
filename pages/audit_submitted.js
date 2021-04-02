@@ -81,7 +81,7 @@ class AuditSubmitted extends Component {
                             See Audit Records
                           </div>
                         </div>
-                        <Modal show={this.state.isOpen} onHide={this.closeModal} dialogueClassName={styles.modal}>
+                        <Modal show={this.state.isOpen} onHide={this.closeModal} size="xl" className={styles.modal}>
                           <Modal.Header closeButton></Modal.Header>
                           <Modal.Body>
                             <img src="/auditrecords.png" alt="img" />
