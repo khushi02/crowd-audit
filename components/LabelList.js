@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Badge } from 'react-bootstrap'
 import styles from './LabelList.module.scss'
 
-const labels = ['GUN', 'BLACK MAN', 'DANGER', 'CRIME', 'POINT', 'HARM', 'PLANT', 'WINDOW', 'DUTY', 'DISTANCE']
+const labels = ['GUN', 'BLACK', 'DANGER', 'CRIME', 'POINT', 'HARM', 'PLANT', 'WINDOW', 'DUTY', 'DISTANCE']
 
 class LabelList extends Component {
   renderLabel(label) {
