@@ -8,13 +8,13 @@ import CustomText from '../../atoms/CustomText'
 
 const useStyles = makeStyles(() => ({
   gridItemLeft: {
-    paddingRight: '2em'
+    paddingRight: '8.064rem'
   },
   gridItemRight: {
-    paddingLeft: '5em'
+    paddingLeft: '2.688rem'
   },
   titleBox: {
-    marginBottom: '1em'
+    marginBottom: '1rem'
   }
 }))
 
@@ -25,7 +25,7 @@ const ProjectHelp = () => {
     <>
       <Grid className={classes.gridItemLeft} item xs={5}>
         <Box className={classes.titleBox}>
-          <CustomText fontSize="1.667em" fontWeight="700" text="How can you help?" />
+          <CustomText fontSize="1.25rem" fontWeight="700" text="How can you help?" />
         </Box>
         <ul>
           {_.map(
@@ -38,7 +38,7 @@ const ProjectHelp = () => {
             ],
             (text, i) => (
               <li key={`li-${i}`}>
-                <CustomText fontSize="1.333em" fontWeight="400" text={text} />
+                <CustomText fontSize="1rem" fontWeight="400" text={text} />
               </li>
             )
           )}

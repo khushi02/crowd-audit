@@ -6,17 +6,17 @@ const useStyles = makeStyles(() => ({
   button: {
     color: '#4F4F4F',
     fontFamily: 'Roboto',
-    fontSize: '1.167em',
+    fontSize: '0.875rem',
     fontWeight: '500',
-    marginLeft: '5em',
+    marginLeft: '5.313rem',
     textTransform: 'none',
     '&:hover': {
       color: '#128F6E',
       fontWeight: '700',
       textDecoration: 'underline',
       textDecorationColor: '#128F6E',
-      textDecorationThickness: '0.25em',
-      textUnderlineOffset: '0.625em'
+      textDecorationThickness: '0.188rem',
+      textUnderlineOffset: '0.469rem'
     }
   },
   underlined: {
@@ -24,8 +24,8 @@ const useStyles = makeStyles(() => ({
     fontWeight: '700',
     textDecoration: 'underline',
     textDecorationColor: '#128F6E',
-    textDecorationThickness: '0.25em',
-    textUnderlineOffset: '0.625em'
+    textDecorationThickness: '0.188rem',
+    textUnderlineOffset: '0.469rem'
   }
 }))
 

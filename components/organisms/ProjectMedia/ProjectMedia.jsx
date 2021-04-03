@@ -4,11 +4,10 @@ import { Box, makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles(() => ({
   imageBox: {
-    paddingLeft: '2em',
-    paddingRight: '2em'
+    padding: '0 1.375rem'
   },
   titleBox: {
-    marginBottom: '1em'
+    marginBottom: '1rem'
   }
 }))
 
@@ -20,7 +19,7 @@ const ProjectMedia = () => {
   return (
     <>
       <Box className={classes.titleBox}>
-        <CustomText fontSize="1.667em" fontWeight="700" text="Media in this project" />
+        <CustomText fontSize="1.25rem" fontWeight="700" text="Media in this project" />
       </Box>
       <Box>
         <Image className={classes.imageBox} fluid src="/projectMedia.png" />

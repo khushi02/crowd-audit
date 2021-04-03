@@ -8,10 +8,10 @@ import ProjectMedia from '../../organisms/ProjectMedia'
 
 const useStyles = makeStyles(() => ({
   container: {
-    padding: '5em 5em'
+    padding: '3.063rem 3.063rem'
   },
   containerTop: {
-    padding: '10em 5em 5em 5em'
+    padding: '5.5rem 3.063rem 3.063rem 3.063em'
   }
 }))
 

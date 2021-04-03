@@ -6,11 +6,11 @@ import CustomText from '../../atoms/CustomText'
 const useStyles = makeStyles(() => ({
   paper: {
     backgroundColor: '#FAFAFA',
-    borderRadius: '0.5em',
-    boxShadow: '0 0.167em 0.167em rgba(0, 0, 0, 0.25)',
-    height: '13em',
-    position: 'relative',
-    width: '16em'
+    borderRadius: '0.401rem',
+    boxShadow: '0 0.125rem 0.125rem rgba(0, 0, 0, 0.25)',
+    height: '9.625rem',
+    position:'relative',
+    width: '12rem'
   },
   labelBox: {
     left: '50%',

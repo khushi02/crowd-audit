@@ -9,15 +9,15 @@ import NavigationButton from '../../molecules/NavigationButton'
 const useStyles = makeStyles(() => ({
   box: {
     alignItems: 'center',
-    margin: '1.25em 1.75em'
+    margin: '0.875rem 1.375rem'
   },
   container: {
     backgroundColor: '#FAFAFA',
-    boxShadow: '0 0.167em 0.167em rgba(0, 0, 0, 0.25)',
-    marginBottom: '0.167em'
+    boxShadow: '0 0.125rem 0.125rem rgba(0, 0, 0, 0.25)',
+    marginBottom: '0.125rem'
   },
   imageBox: {
-    width: '7.5em',
+    width: '5rem',
     '&:hover': {
       cursor: 'pointer'
     }
