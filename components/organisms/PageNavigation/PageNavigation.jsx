@@ -9,22 +9,17 @@ import NavigationButton from '../../molecules/NavigationButton'
 const useStyles = makeStyles(() => ({
   box: {
     alignItems: 'center',
-    margin: '1.25em 1.75em'
+    margin: '0.875rem 1.375rem'
   },
   container: {
     backgroundColor: '#FAFAFA',
-    boxShadow: '0 0.167em 0.167em rgba(0, 0, 0, 0.25)',
-    marginBottom: '0.167em'
+    boxShadow: '0 0.125rem 0.125rem rgba(0, 0, 0, 0.25)',
+    marginBottom: '0.125rem'
   },
   imageBox: {
-    width: '7.5em',
+    width: '5rem',
     '&:hover': {
       cursor: 'pointer'
-    }
-  },
-  pageButton: {
-    '&:hover': {
-      color: '#128f6e'
     }
   }
 }))
@@ -41,29 +36,22 @@ const PageNavigation = () => {
               <Image fluid src="/logo1.png" />
             </Link>
           </Box>
-          {_.map(['Projects', 'FAQ', 'About'], text => {
+          {_.map(['Projects', 'FAQ', 'About'], (text) => {
             const lowerCased = text.toLowerCase()
-            return (
-              <NavigationButton
-                key={`btn-${lowerCased}`}
-                link={`/${lowerCased}`}
-                text={text}
-                className={classes.pageButton}
-              />
-            )
+            return <NavigationButton key={`btn-${lowerCased}`} link={`/${lowerCased}`} text={text} />
           })}
         </Box>
       </Grid>
       <Grid item xs={6}>
         <Box className={classes.box} display="flex" justifyContent="flex-end">
-          {_.map(['Login', 'Register'], text => {
+          {_.map(['Login', 'Register'], (text) => {
             const lowerCased = text.toLowerCase()
             return (
               <NavigationButton
+                emphasized={text === 'Register'}
                 key={`btn-${lowerCased}`}
                 link={`/${lowerCased}`}
                 text={text}
-                emphasized={text === 'Register'}
               />
             )
           })}

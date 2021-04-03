@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styles from './audit.module.scss'
-import LabelList from '../../LabelList'
+import LabelList from '../../organisms/LabelList'
 
 class AuditPageTemplate extends Component {
   render() {
@@ -9,12 +9,6 @@ class AuditPageTemplate extends Component {
         <div className={styles.contentWrap}>
           <div className={styles.auditContainer}>
             <br />
-            <h5>Help Improve Google's Computer Vision for Minorities</h5>
-            <br />
-            <p className={styles.projectDesc}>
-              Google Computer Vision is extensively used around the globe to understand images. Crowd Auditing could
-              help uncover hidden misclassifications that impact underrepresented communities.
-            </p>
             <div className="card">
               <div className={styles.landingContainer1}>
                 <div className={styles.auditBarLeft}>

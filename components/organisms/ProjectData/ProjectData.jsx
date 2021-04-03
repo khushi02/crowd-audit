@@ -9,12 +9,12 @@ import StatPaper from '../../molecules/StatPaper/'
 
 const useStyles = makeStyles(() => ({
   dataBox: {
-    paddingLeft: '10em',
-    paddingRight: '10em',
-    paddingTop: '5em'
+    paddingLeft: '6.875rem',
+    paddingRight: '6.875rem',
+    paddingTop: '2.438rem'
   },
   statBox: {
-    paddingTop: '5em'
+    paddingTop: '2.438rem'
   }
 }))
 
@@ -23,7 +23,7 @@ const ProjectData = () => {
 
   return (
     <>
-      <CustomText fontSize="1.667em" fontWeight="700" text="Project Data" />
+      <CustomText fontSize="1.25rem" fontWeight="700" text="Project Data" />
       <Box className={classes.dataBox}>
         <CustomProgressBar value={45} />
         <Box className={classes.statBox} display="flex" flexWrap="wrap" justifyContent="space-between">

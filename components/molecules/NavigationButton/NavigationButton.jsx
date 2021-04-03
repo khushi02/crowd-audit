@@ -5,10 +5,13 @@ const useStyles = makeStyles(() => ({
   button: {
     color: '#4F4F4F',
     fontFamily: 'Roboto',
-    fontSize: '1.167em',
+    fontSize: '0.875rem',
     fontWeight: '400',
-    marginLeft: '4.5em',
-    textTransform: 'none'
+    marginLeft: '4.375rem',
+    textTransform: 'none',
+    '&:hover': {
+      color: '#128F6E'
+    }
   },
   emphasized: {
     color: '#128F6E'

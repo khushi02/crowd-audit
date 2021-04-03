@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
 import { withRouter } from 'next/router'
-import styles from '../components/templates/AuditPageTemplate/audit.module.scss'
-import LabelList from '../components/LabelList'
+import { Grid } from '@material-ui/core'
 import FormControl from 'react-bootstrap/FormControl'
+
+import styles from '../components/templates/AuditPageTemplate/audit.module.scss'
+import LabelList from '../components/organisms/LabelList'
+import ProjectHeader from '../components/organisms/ProjectHeader'
 
 class AuditSelect extends Component {
   constructor() {
@@ -29,16 +32,11 @@ class AuditSelect extends Component {
 
   render() {
     return (
-      <div>
+      <>
+        <ProjectHeader />
         <div className={styles.contentWrap}>
           <div className={styles.auditContainer}>
             <br />
-            <h5>Help Improve Google's Computer Vision for Minorities</h5>
-            <br />
-            <p className={styles.projectDesc}>
-              Google Computer Vision is extensively used around the globe to understand images. Crowd Auditing could
-              help uncover hidden misclassifications that impact underrepresented communities.
-            </p>
             <div className="card">
               <div className={styles.landingContainer1}>
                 <div className={styles.auditBarLeft}>
@@ -101,7 +99,7 @@ class AuditSelect extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </>
     )
   }
 }
