@@ -21,7 +21,7 @@ const ProjectsPageTemplate = () => {
 
   return (
     <Box className={classes.box}>
-      <CustomText fontSize='0.875rem' fontWeight='400' text='4 Active Projects' />
+      <CustomText fontSize="0.875rem" fontWeight="400" text="4 Active Projects" />
       {_.map(data, ({ thumbnail, title, description }, i) => (
         <Box className={classes.cardBox} key={`card-${i}`}>
           <ProjectCard image={thumbnail} title={title} description={description} />

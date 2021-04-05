@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
   container: {
     backgroundColor: '#FAFAFA',
     borderRadius: '0.625rem',
-    boxShadow: '0 0.125rem 0.125rem rgba(0, 0, 0, 0.25)',
+    boxShadow: '0 0.125rem 0.125rem rgba(0, 0, 0, 0.25)'
   },
   descriptionBox: {
     marginBottom: '3rem',
@@ -52,10 +52,10 @@ const ProjectCard = ({ image, title, description }) => {
       <Grid item xs={8}>
         <Box className={classes.middleBox}>
           <Box className={classes.titleBox}>
-            <CustomText fontSize='1.25rem' fontWeight='700' text={title} />
+            <CustomText fontSize="1.25rem" fontWeight="700" text={title} />
           </Box>
           <Box className={classes.descriptionBox}>
-            <CustomText fontSize='0.75rem' fontWeight='400' text={description} />
+            <CustomText fontSize="0.75rem" fontWeight="400" text={description} />
           </Box>
         </Box>
       </Grid>
