@@ -1,38 +1,34 @@
 import _ from 'lodash'
 
-import React, { Component } from 'react'
-import Link from 'next/link'
+import React from 'react'
+import { Box, makeStyles } from '@material-ui/core'
 
-import styles from './ProjectsPageTemplate.module.scss'
+import ProjectCard from '../../molecules/ProjectCard'
 import data from '../../../public/projects/data'
+import CustomText from '../../atoms/CustomText'
 
-class ProjectsPageTemplate extends Component {
-  renderProjects() {
-    return _.map(data, (project) => (
-      <div key={project.id} className={`card ${styles.cardContainer} mb-3`}>
-        <div className="row" style={{ height: '100%', margin: '0 0' }}>
-          <div className="col-md-2" style={{ position: 'relative' }}>
-            <img className={`${styles.centerItem} ${styles.cardImage}`} src={project.thumbnail}></img>
-          </div>
-          <div className="col-md-8">
-            <div className="card-body">
-              <h5 className="card-title">{project.title}</h5>
-              <p className="card-text">{project.description}</p>
-            </div>
-          </div>
-          <div className="col-md-2" style={{ position: 'relative' }}>
-            <Link href={`/project/learn`}>
-              <a className={`btn ${styles.centerItem} ${styles.cardButton}`}>View Project</a>
-            </Link>
-          </div>
-        </div>
-      </div>
-    ))
+const useStyles = makeStyles(() => ({
+  box: {
+    margin: '8.25rem 4.813rem 4.063rem 6.938rem '
+  },
+  cardBox: {
+    marginTop: '2rem'
   }
+}))
 
-  render() {
-    return <div className={styles.listContainer}>{this.renderProjects()}</div>
-  }
+const ProjectsPageTemplate = () => {
+  const classes = useStyles()
+
+  return (
+    <Box className={classes.box}>
+      <CustomText fontSize='0.875rem' fontWeight='400' text='4 Active Projects' />
+      {_.map(data, ({ thumbnail, title, description }, i) => (
+        <Box className={classes.cardBox} key={`card-${i}`}>
+          <ProjectCard image={thumbnail} title={title} description={description} />
+        </Box>
+      ))}
+    </Box>
+  )
 }
 
 export default ProjectsPageTemplate

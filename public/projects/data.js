@@ -1,49 +1,28 @@
 const data = [
     {
         id: 1,
-        title: "Improving facial recognition for Microsoft's Teams Conference Calls",
-        description: "Teams Conference Calls can detect participants face to improve virtual background detection. Crowd Auditing could help identify potential errors that cause identity harms to certain groups of people.",
-        thumbnail: "/projects/project1.jpeg",
-        stats: [2411, 12415, 41, 2019, 793],
-        progress: 47,
-        abouts: ["Google Computer Vision is extensively used around the globe for learning new information. Google uses it’s advanced computer vision ML model to produce labels for images that describe them. This model helps in generating quick results in real-time and high-stakes tasks that can allow quick description and categorization of images. However, ML engineers of this project have identifed cases of harmful biases against minority groups. They want the crowd auditors to help them identify various biases against minorities and come up with hypothesis to find a solution.", "You’ll see a subset of images that have been labeled by the Computer Vision ML model. These images are a collection of random image types that are taken from multiple applications and use cases where Google’s Computer Vision is utilised. You’ll see an image and associated labels for each image that has been produced by the ML model. The audit tasks especially asks for minorities that may be affected due to mislabels and how severely does it impacts them.", "Start by auditing the images and share your perspective. If you see any labels causing harm to a minority population, select those labels and report them. Submit your explanation for why you think it is biased or harmful and highlight which minority group it most affects. Raise your concerns by starting a discussion post, participate in discussions, share specific images with people you know from the minority group to gain a better perspective. Ultimately, help the ML engineers gather enough data that allows them to identify the problem with their ML model training that causes this issue and eventually find a solution."]
+        title: "Gender Biases in YouTube Ads",
+        description: 'YouTube advertising allows for your video content to be advertised on YouTube in order to ensure you can maximize your user reach. Auditing ads could be useful in understanding which ads are potentially harmfully biased.',
+        thumbnail: "/projects/project1.png",
     },
     {
         id: 2,
-        title: "Gender Biases in Hiring",
-        description: "Companies use advanced ATS systems to filter candidates. Crowd Auditing could help organizations identify inherent biases for resume selection.",
-        thumbnail: "/projects/project2.jpeg",
-        stats: [23562, 124215, 5321, 8643, 1561],
-        progress: 87,
-        abouts: ["Google Computer Vision is extensively used around the globe for learning new information. Google uses it’s advanced computer vision ML model to produce labels for images that describe them. This model helps in generating quick results in real-time and high-stakes tasks that can allow quick description and categorization of images. However, ML engineers of this project have identifed cases of harmful biases against minority groups. They want the crowd auditors to help them identify various biases against minorities and come up with hypothesis to find a solution.", "You’ll see a subset of images that have been labeled by the Computer Vision ML model. These images are a collection of random image types that are taken from multiple applications and use cases where Google’s Computer Vision is utilised. You’ll see an image and associated labels for each image that has been produced by the ML model. The audit tasks especially asks for minorities that may be affected due to mislabels and how severely does it impacts them.", "Start by auditing the images and share your perspective. If you see any labels causing harm to a minority population, select those labels and report them. Submit your explanation for why you think it is biased or harmful and highlight which minority group it most affects. Raise your concerns by starting a discussion post, participate in discussions, share specific images with people you know from the minority group to gain a better perspective. Ultimately, help the ML engineers gather enough data that allows them to identify the problem with their ML model training that causes this issue and eventually find a solution."]
+        title: "Improving Facial Recognition for Microsoft’s Teams Conference Calls",
+        description: 'Teams Conference Calls can detect participants face to improve virtual background detection. Crowd Auditing could help identify potential errors that cause identity harms to certain groups of people.',
+        thumbnail: "/projects/project2.png",
     },
     {
         id: 3,
-        title: "Improving Location-Based Biases in Tesla's Self Driving Mode",
-        description: "Tesla vehicles are changing to safe mode driving when driving in the red zone areas. Crowd Auditing could help identify risks and improve road safety in general.",
-        thumbnail: "/projects/project3.jpeg",
-        stats: [7812, 66341, 152, 3978, 1001],
-        progress: 12,
-        abouts: ["Google Computer Vision is extensively used around the globe for learning new information. Google uses it’s advanced computer vision ML model to produce labels for images that describe them. This model helps in generating quick results in real-time and high-stakes tasks that can allow quick description and categorization of images. However, ML engineers of this project have identifed cases of harmful biases against minority groups. They want the crowd auditors to help them identify various biases against minorities and come up with hypothesis to find a solution.", "You’ll see a subset of images that have been labeled by the Computer Vision ML model. These images are a collection of random image types that are taken from multiple applications and use cases where Google’s Computer Vision is utilised. You’ll see an image and associated labels for each image that has been produced by the ML model. The audit tasks especially asks for minorities that may be affected due to mislabels and how severely does it impacts them.", "Start by auditing the images and share your perspective. If you see any labels causing harm to a minority population, select those labels and report them. Submit your explanation for why you think it is biased or harmful and highlight which minority group it most affects. Raise your concerns by starting a discussion post, participate in discussions, share specific images with people you know from the minority group to gain a better perspective. Ultimately, help the ML engineers gather enough data that allows them to identify the problem with their ML model training that causes this issue and eventually find a solution."]
+        title: "Underrepresentation in Google Image Search",
+        description: 'Google Image Search allows users to search the World Wide Web for Image Content. Help improve the search algorithm so that the image results are accurate and unbiased.',
+        thumbnail: "/projects/project3.png",
     },
     {
         id: 4,
         title: "Help improve Google's Computer Vision for Minorities",
         description: "Google Computer Vision is extensively used around the globe to understand images. Crowd Auditing could help uncover hidden misclassifications that impact underrepresented communities.",
-        thumbnail: "/projects/project4.jpeg",
-        stats: [3490, 98451, 450, 2269, 1569],
-        progress: 45,
-        abouts: ["Google Computer Vision is extensively used around the globe for learning new information. Google uses it’s advanced computer vision ML model to produce labels for images that describe them. This model helps in generating quick results in real-time and high-stakes tasks that can allow quick description and categorization of images. However, ML engineers of this project have identifed cases of harmful biases against minority groups. They want the crowd auditors to help them identify various biases against minorities and come up with hypothesis to find a solution.", "You’ll see a subset of images that have been labeled by the Computer Vision ML model. These images are a collection of random image types that are taken from multiple applications and use cases where Google’s Computer Vision is utilised. You’ll see an image and associated labels for each image that has been produced by the ML model. The audit tasks especially asks for minorities that may be affected due to mislabels and how severely does it impacts them.", "Start by auditing the images and share your perspective. If you see any labels causing harm to a minority population, select those labels and report them. Submit your explanation for why you think it is biased or harmful and highlight which minority group it most affects. Raise your concerns by starting a discussion post, participate in discussions, share specific images with people you know from the minority group to gain a better perspective. Ultimately, help the ML engineers gather enough data that allows them to identify the problem with their ML model training that causes this issue and eventually find a solution."]
+        thumbnail: "/projects/project4.png",
     },
-    {
-        id: 5,
-        title: "Gender Biases in YouTube Ads",
-        description: "YouTube advertising allows for your video content to be advertised on YouTube in order to ensure you can maximize your user reach. Auditing ads could be useful in understanding which ads are potentially harmfully biased.",
-        thumbnail: "/projects/project5.jpeg",
-        stats: [1590, 20900, 88, 1500, 980],
-        progress: 30,
-        abouts: ["YouTube advertising allows for your video content to be advertised on YouTube in order to ensure you can maximize your user reach. YouTube uses a machine learning algorithm to target specific users and shows them ads based on their interests, preferences, demographics, and more. However, ML engineers of this project have noticed many instances where display of such ads to different genders are often biased. They want the crowd auditors to help them identify various biases against men or women and come up with hypothesis to find a solution.", "You’ll see snippets of different advertisements that have been uploaded and shared on YouTube. These ads will be accompanied by labels that are generated by the ML model and used to filter which advertisement would be shown to which target users. Labels are more descriptive of interests, demographics, and more. The audit tasks especially asks for examples and instances that may prove gender bias causing harm at a social or psychological level.", "Start by auditing the video ads and share your perspective. If you see any labels causing harm to a certain gender population, select those labels and report them. Submit your explanation for why you think it is biased or harmful and highlight with an example from your life. Raise your concerns by starting a discussion post, participate in discussions, share specific images with people you know from relevant gender groups to gain a better perspective. Ultimately, help the ML engineers gather enough data that allows them to identify the problem with their ML model training that causes this issue and eventually find a solution."]
-    }
 ];
 
 export default data;
