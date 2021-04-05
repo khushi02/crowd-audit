@@ -15,14 +15,11 @@ const useStyles = makeStyles(() => ({
   container: {
     backgroundColor: '#FAFAFA',
     borderRadius: '0.625rem',
-    boxShadow: '0 0.125rem 0.125rem rgba(0, 0, 0, 0.25)'
+    boxShadow: '0 0.125rem 0.125rem rgba(0, 0, 0, 0.25)',
   },
   descriptionBox: {
     marginBottom: '3rem',
     marginTop: '1.25rem'
-  },
-  leftBox: {
-    alignItems: 'center'
   },
   middleBox: {
     paddingLeft: '2.5rem',
@@ -45,9 +42,7 @@ const ProjectCard = ({ image, title, description }) => {
   return (
     <Grid className={classes.container} container>
       <Grid item xs={2}>
-        <Box className={classes.leftBox}>
-          <Image fluid src={image} />
-        </Box>
+        <Image fluid src={image} />
       </Grid>
       <Grid item xs={8}>
         <Box className={classes.middleBox}>
