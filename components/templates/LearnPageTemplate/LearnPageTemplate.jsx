@@ -1,18 +1,21 @@
 import React from 'react'
 import { Box, Grid, makeStyles } from '@material-ui/core'
 
+import ProjectAbout from '../../organisms/ProjectAbout'
 import ProjectData from '../../organisms/ProjectData'
-import ProjectDescription from '../../organisms/ProjectDescription'
 import ProjectHelp from '../../organisms/ProjectHelp'
 import ProjectMedia from '../../organisms/ProjectMedia'
 
 const useStyles = makeStyles(() => ({
-  container: {
-    padding: '3.063rem 3.063rem'
+  aboutContainer: {
+    padding: '5.5rem 5.75rem 5.938rem 4.375rem'
   },
-  containerTop: {
-    padding: '5.5rem 3.063rem 3.063rem 3.063em'
-  }
+  progressContainer: {
+    padding: '4.125rem 5.75rem 5.938rem 4.375rem'
+  },
+  dataContainer: {},
+  descriptionContainer: {},
+  helpContainer: {}
 }))
 
 const LearnPageTemplate = () => {
@@ -20,16 +23,16 @@ const LearnPageTemplate = () => {
 
   return (
     <>
-      <Grid className={classes.containerTop} container>
-        <ProjectDescription />
+      <Grid className={classes.aboutContainer} container>
+        <ProjectAbout />
       </Grid>
-      <Box className={classes.container}>
+      <Box className={classes.progressContainer}>
         <ProjectData />
       </Box>
-      <Grid className={classes.container} container>
+      <Grid className={classes.helpContainer} container>
         <ProjectHelp />
       </Grid>
-      <Box className={classes.container}>
+      <Box className={classes.dataContainer}>
         <ProjectMedia />
       </Box>
     </>
