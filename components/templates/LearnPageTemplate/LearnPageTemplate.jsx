@@ -1,17 +1,25 @@
 import React from 'react'
+import { Image } from 'react-bootstrap'
 import { Box, Grid, makeStyles } from '@material-ui/core'
 
+import ProjectAbout from '../../organisms/ProjectAbout'
 import ProjectData from '../../organisms/ProjectData'
 import ProjectDescription from '../../organisms/ProjectDescription'
-import ProjectHelp from '../../organisms/ProjectHelp'
-import ProjectMedia from '../../organisms/ProjectMedia'
+import ProjectProgress from '../../organisms/ProjectProgress'
 
 const useStyles = makeStyles(() => ({
-  container: {
-    padding: '3.063rem 3.063rem'
+  aboutContainer: {
+    padding: '5.5rem 5.75rem 5.938rem 4.375rem'
   },
-  containerTop: {
-    padding: '5.5rem 3.063rem 3.063rem 3.063em'
+  progressContainer: {
+    backgroundColor: '#E5E5E5',
+    padding: '4.125rem 5.75rem 5.938rem 4.375rem'
+  },
+  dataContainer: {
+    padding: '3.625rem 6.875rem 6.813rem 6.875rem'
+  },
+  descriptionContainer: {
+    padding: '5.5rem 5.75rem 3.625rem 4.375rem'
   }
 }))
 
@@ -20,17 +28,20 @@ const LearnPageTemplate = () => {
 
   return (
     <>
-      <Grid className={classes.containerTop} container>
+      <Grid className={classes.aboutContainer} container>
+        <ProjectAbout />
+      </Grid>
+      <Box className={classes.progressContainer}>
+        <ProjectProgress />
+      </Box>
+      <Box className={classes.helpContainer}>
+        <Image fluid src="/projectHelp.png" />
+      </Box>
+      <Grid className={classes.descriptionContainer} container>
         <ProjectDescription />
       </Grid>
-      <Box className={classes.container}>
+      <Box className={classes.dataContainer} display="flex" flexWrap="wrap" justifyContent="space-between">
         <ProjectData />
-      </Box>
-      <Grid className={classes.container} container>
-        <ProjectHelp />
-      </Grid>
-      <Box className={classes.container}>
-        <ProjectMedia />
       </Box>
     </>
   )

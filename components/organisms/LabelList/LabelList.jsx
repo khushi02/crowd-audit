@@ -11,7 +11,12 @@ const LabelList = ({ selectedLabel }) => (
   <>
     {_.map(labels, (label, i) => (
       <Box key={`chip-${i}`}>
-        <LabelChip clickable label={label} link={`/audit_select?label=${label}`} selected={label === selectedLabel} />
+        <LabelChip
+          clickable
+          label={`<${label}>`}
+          link={`/audit_select?label=${label}`}
+          selected={label === selectedLabel}
+        />
       </Box>
     ))}
   </>

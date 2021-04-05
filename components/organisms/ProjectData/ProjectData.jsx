@@ -1,7 +1,7 @@
 import _ from 'lodash'
 
 import React from 'react'
-import { Box, makeStyles } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core'
 
 import CustomText from '../../atoms/CustomText'
 import CustomProgressBar from '../../molecules/CustomProgressBar'
@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
     paddingTop: '2.438rem'
   },
   statBox: {
-    paddingTop: '2.438rem'
+    padding: '0 2.5rem 0 1rem'
   }
 }))
 
@@ -23,24 +23,18 @@ const ProjectData = () => {
 
   return (
     <>
-      <CustomText fontSize="1.25rem" fontWeight="700" text="Project Data" />
-      <Box className={classes.dataBox}>
-        <CustomProgressBar value={45} />
-        <Box className={classes.statBox} display="flex" flexWrap="wrap" justifyContent="space-between">
-          {_.map(
-            [
-              { label: 'Auditors', value: 3490 },
-              { label: 'Labels', value: 98451 },
-              { label: 'Hypotheses Created', value: 450 },
-              { label: 'Images Audited', value: 2269 },
-              { label: 'Discussions Posted', value: 1569 }
-            ],
-            ({ label, value }) => (
-              <StatPaper key={`paper-${label}`} label={label} value={value} />
-            )
-          )}
-        </Box>
-      </Box>
+      {_.map(
+        [
+          { label: 'Auditors', value: 3490 },
+          { label: 'Labels', value: 98451 },
+          { label: 'Hypotheses Created', value: 450 },
+          { label: 'Images Audited', value: 2269 },
+          { label: 'Discussions Posted', value: 1569 }
+        ],
+        ({ label, value }, i) => (
+          <StatPaper icon={`/projectStat${i + 1}.png`} key={`paper-${label}`} label={label} value={value} />
+        )
+      )}
     </>
   )
 }
