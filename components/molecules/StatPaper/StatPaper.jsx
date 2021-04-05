@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
     borderRadius: '0.401rem',
     boxShadow: '0 0.125rem 0.125rem rgba(0, 0, 0, 0.25)',
     height: '9.625rem',
-    position:'relative',
+    position: 'relative',
     width: '12rem'
   },
   labelBox: {
@@ -35,10 +35,10 @@ const StatPaper = ({ label, value }) => {
   return (
     <Paper className={classes.paper}>
       <Box className={classes.valueBox}>
-        <CustomText fontSize="2.25em" fontWeight="500" text={value} />
+        <CustomText fontSize="1.719rem" fontWeight="500" text={value} />
       </Box>
       <Box className={classes.labelBox}>
-        <CustomText fontSize="1.25em" fontWeight="500" text={label} />
+        <CustomText fontSize="0.917rem" fontWeight="500" text={label} />
       </Box>
     </Paper>
   )
