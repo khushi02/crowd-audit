@@ -12,7 +12,7 @@ const useStyles = makeStyles(() => ({
     margin: '0.875rem 1.375rem'
   },
   container: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#FAFAFA',
     boxShadow: '0 0.125rem 0.125rem rgba(0, 0, 0, 0.25)',
     marginBottom: '0.125rem'
   },
