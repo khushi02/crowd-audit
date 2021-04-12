@@ -1,8 +1,8 @@
 import React from 'react'
 import { Box, makeStyles } from '@material-ui/core'
 
-import CustomText from '../../atoms/CustomText'
-import CustomProgressBar from '../../molecules/CustomProgressBar'
+import CustomText from '../../../atoms/CustomText'
+import CustomProgressBar from '../../../molecules/CustomProgressBar'
 
 const useStyles = makeStyles(() => ({
   progressBarBox: {

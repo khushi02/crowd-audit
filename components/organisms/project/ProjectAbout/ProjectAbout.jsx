@@ -4,8 +4,8 @@ import React from 'react'
 import { Image } from 'react-bootstrap'
 import { Box, Grid, makeStyles } from '@material-ui/core'
 
-import CustomText from '../../atoms/CustomText'
-import RedirectionButton from '../../molecules/RedirectionButton'
+import CustomText from '../../../atoms/CustomText'
+import RedirectionButton from '../../../molecules/RedirectionButton'
 
 const useStyles = makeStyles(() => ({
   gridItemLeft: {

@@ -1,57 +1,68 @@
-import React, { Component } from 'react'
-import styles from './audit.module.scss'
+import React from 'react'
+import { Image } from 'react-bootstrap'
+import { Box, Grid, makeStyles } from '@material-ui/core'
+
+import AuditImageHeader from '../../organisms/AuditImageHeader/AuditImageHeader'
+import AuditImageTitle from '../../organisms/AuditImageTitle'
+import AuditStart from '../../organisms/audit/AuditStart/AuditStart'
+import CustomText from '../../atoms/CustomText'
 import LabelList from '../../organisms/LabelList'
 
-class AuditPageTemplate extends Component {
-  render() {
-    return (
-      <div>
-        <div className={styles.contentWrap}>
-          <div className={styles.auditContainer}>
-            <br />
-            <div className="card">
-              <div className={styles.landingContainer1}>
-                <div className={styles.auditBarLeft}>
-                  <p className={styles.auditBarText}>
-                    <b>Auditing Image 243</b> / 5043
-                  </p>
-                </div>
-              </div>
-              <div className="row no-gutters">
-                <div className="col-auto">
-                  <img src="/gluegun.png" alt="img" />
-                </div>
-                <div className="col bg-light px-4">
-                  <br />
-                  <h5>Labels</h5>
-                  <br />
-                  <LabelList />
-                </div>
-                <div className="col-sm-6 px-5">
-                  <br />
-                  <p className="card-title">
-                    Google's algorithm scans the images to generate labels that describe the whole image.
-                  </p>
-                  <br />
-                  <br />
-                  <h5 className={styles.question}>
-                    Do any labels for this image seem biased or discriminatory in a way that negatively impacts any
-                    group of people?
-                  </h5>
-                  <p className={styles.arrow}>&lt;-- Select labels to report</p>
-                  <div className={`col-md-2 ${styles.buttonContainer}`}>
-                    <a href="#" className={`btn ${styles.cardButton}`}>
-                      Skip to Next Image
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    )
+const useStyles = makeStyles(() => ({
+  background: {
+    backgroundColor: '#FAFAFA'
+  },
+  bottomBox: {
+    height: '5.625rem'
+  },
+  box: {
+    alignItems: 'center',
+    borderBottom: '0.063rem solid #4F4F4F',
+    padding: '1.375rem'
+  },
+  container: {
+    paddingLeft: '3.375rem'
+  },
+  image: {
+    display: 'block',
+    margin: 'auto',
+    maxHeight: '100%',
+    maxWidth: '100%'
+  },
+  rightGridItem: {
+    borderLeft: '0.063rem solid #4F4F4F'
   }
+}))
+
+const AuditPageTemplate = () => {
+  const classes = useStyles()
+
+  return (
+    <>
+      <Grid className={classes.container} container>
+        <Grid item xs={6}>
+          <AuditImageTitle canShare imageId={234} numImages={5043} />
+          <Grid container>
+            <Grid className={classes.background} item xs={9}>
+              <AuditImageHeader />
+              <Image className={classes.image} fluid src="/auditImage.png" />
+            </Grid>
+            <Grid item xs>
+              <Box className={classes.box}>
+                <CustomText color="#128F6E" fontSize="1rem" fontWeight="700" text="Labels" />
+              </Box>
+              <LabelList />
+            </Grid>
+          </Grid>
+          <Box className={`${classes.background} ${classes.bottomBox}`} />
+        </Grid>
+        <Grid className={classes.rightGridItem} item xs>
+          <AuditStart />
+          <Box className={classes.bottomBox} />
+        </Grid>
+      </Grid>
+    </>
+  )
 }
 
 export default AuditPageTemplate

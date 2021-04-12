@@ -11,7 +11,7 @@ class Index extends Component {
             <div className={styles.textCont}>
               <h1 className={styles.heading}>Welcome to Crowd Audit!</h1>
               <h2 className={styles.headingDesc}>Make technology fair for everyone!</h2>
-              <Link href={`/project/learn`}>
+              <Link href={`/projects`}>
                 <a className={`btn ${styles.headerCardButton}`}>See All Projects</a>
               </Link>
             </div>

@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
   container: {
     backgroundColor: '#FAFAFA',
     borderRadius: '0.625rem',
-    boxShadow: '0 0.125rem 0.125rem rgba(0, 0, 0, 0.25)',
+    boxShadow: '0 0.125rem 0.125rem rgba(0, 0, 0, 0.25)'
   },
   descriptionBox: {
     marginBottom: '3rem',
@@ -59,6 +59,7 @@ const ProjectCard = ({ image, title, description }) => {
           <Box className={classes.buttonBox}>
             <RedirectionButton
               fontSize="0.875rem"
+              fontWeight="700"
               height="2.227rem"
               link="/project/learn"
               text="View Project"
