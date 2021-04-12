@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
   container: {
     backgroundColor: '#FAFAFA',
     borderRadius: '0.625rem',
-    boxShadow: '0 0.125rem 0.125rem rgba(0, 0, 0, 0.25)',
+    boxShadow: '0 0.125rem 0.125rem rgba(0, 0, 0, 0.25)'
   },
   descriptionBox: {
     marginBottom: '3rem',
