@@ -4,7 +4,7 @@ import React from 'react'
 import { Image } from 'react-bootstrap'
 import { Box, Grid, makeStyles } from '@material-ui/core'
 
-import CustomText from '../../atoms/CustomText'
+import CustomText from '../../../atoms/CustomText'
 
 const useStyles = makeStyles(() => ({
   gridItemLeft: {

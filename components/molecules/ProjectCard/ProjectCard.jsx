@@ -59,6 +59,7 @@ const ProjectCard = ({ image, title, description }) => {
           <Box className={classes.buttonBox}>
             <RedirectionButton
               fontSize="0.875rem"
+              fontWeight="700"
               height="2.227rem"
               link="/project/learn"
               text="View Project"

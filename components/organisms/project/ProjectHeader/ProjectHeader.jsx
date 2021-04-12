@@ -6,8 +6,8 @@ import { Box, Grid } from '@material-ui/core'
 import { NavigateBeforeOutlined } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/styles'
 
-import CustomText from '../../atoms/CustomText'
-import UnderlinedButton from '../../molecules/UnderlinedButton'
+import CustomText from '../../../atoms/CustomText'
+import UnderlinedButton from '../../../molecules/UnderlinedButton'
 
 const useStyles = makeStyles(() => ({
   box: {

@@ -16,7 +16,7 @@ const useStyles = makeStyles(() => ({
   }
 }))
 
-const AuditImageHeader = ({ canShare, imageId, numImages }) => {
+const AuditImageTitle = ({ canShare, imageId, numImages }) => {
   const classes = useStyles()
 
   return (
@@ -42,4 +42,4 @@ const AuditImageHeader = ({ canShare, imageId, numImages }) => {
   )
 }
 
-export default AuditImageHeader
+export default AuditImageTitle

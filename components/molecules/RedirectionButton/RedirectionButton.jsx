@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, makeStyles } from '@material-ui/core'
 
-const useStyles = ({ filled, fontSize, height, width }) =>
+const useStyles = ({ filled, fontSize, fontWeight, height, width }) =>
   makeStyles(() => ({
     button: {
       backgroundColor: filled ? '#128F6E' : '#FFFFFF',
@@ -11,7 +11,7 @@ const useStyles = ({ filled, fontSize, height, width }) =>
       color: filled ? '#FFFFFF' : '#128F6E',
       fontFamily: 'Roboto',
       fontSize: fontSize,
-      fontWeight: '700',
+      fontWeight: fontWeight,
       height: height,
       textTransform: 'none',
       width: width,
@@ -22,8 +22,8 @@ const useStyles = ({ filled, fontSize, height, width }) =>
     }
   }))
 
-const RedirectionButton = ({ filled, fontSize, height, link, text, width }) => {
-  const classes = useStyles({ filled, fontSize, height, width })()
+const RedirectionButton = ({ filled, fontSize, fontWeight, height, link, text, width }) => {
+  const classes = useStyles({ filled, fontSize, fontWeight, height, width })()
 
   return (
     <Button className={classes.button} href={link}>
