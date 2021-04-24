@@ -2,10 +2,10 @@ import React from 'react'
 import { Image } from 'react-bootstrap'
 import { Box, Grid, makeStyles } from '@material-ui/core'
 
-import ProjectAbout from '../../organisms/ProjectAbout'
-import ProjectData from '../../organisms/ProjectData'
-import ProjectDescription from '../../organisms/ProjectDescription'
-import ProjectProgress from '../../organisms/ProjectProgress'
+import ProjectAbout from '../../organisms/project/ProjectAbout'
+import ProjectData from '../../organisms/project/ProjectData'
+import ProjectDescription from '../../organisms/project/ProjectDescription'
+import ProjectProgress from '../../organisms/project/ProjectProgress'
 
 const useStyles = makeStyles(() => ({
   aboutContainer: {

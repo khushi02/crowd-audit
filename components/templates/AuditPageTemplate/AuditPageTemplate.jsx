@@ -2,11 +2,11 @@ import React from 'react'
 import { Image } from 'react-bootstrap'
 import { Box, Grid, makeStyles } from '@material-ui/core'
 
-import AuditImageHeader from '../../organisms/AuditImageHeader/AuditImageHeader'
-import AuditImageTitle from '../../organisms/AuditImageTitle'
+import AuditImageHeader from '../../organisms/audit/AuditImageHeader'
+import AuditImageTitle from '../../organisms/audit/AuditImageTitle'
 import AuditStart from '../../organisms/audit/AuditStart/AuditStart'
 import CustomText from '../../atoms/CustomText'
-import LabelList from '../../organisms/LabelList'
+import LabelList from '../../organisms/audit/LabelList'
 
 const useStyles = makeStyles(() => ({
   background: {
