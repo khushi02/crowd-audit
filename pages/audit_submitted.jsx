@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Link from 'next/link'
 import { Badge, Modal } from 'react-bootstrap'
 
-import ProjectHeader from '../components/organisms/ProjectHeader'
+import ProjectHeader from '../components/organisms/project/ProjectHeader'
 import styles from '../components/templates/AuditPageTemplate/audit.module.scss'
 
 const yourLabels = ['GUN', 'CRIME']
@@ -66,7 +66,7 @@ class AuditSubmitted extends Component {
                     </div>
                     <div className={styles.labelsCol2}>
                       <p>Top Reported Labels</p>
-                      <div>{this.renderReportedLabels()}</div>
+                      {this.renderReportedLabels()}
                     </div>
                   </div>
                   <div className={styles.buttonsContainer}>

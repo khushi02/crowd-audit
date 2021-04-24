@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, makeStyles } from '@material-ui/core'
 import { BookmarkBorder, OpenWith } from '@material-ui/icons'
 
-import CustomText from '../../atoms/CustomText'
+import CustomText from '../../../atoms/CustomText'
 
 const useStyles = makeStyles(() => ({
   box: {

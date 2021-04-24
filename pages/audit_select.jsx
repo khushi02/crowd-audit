@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
 import { withRouter } from 'next/router'
-import { Grid } from '@material-ui/core'
 import FormControl from 'react-bootstrap/FormControl'
 
 import styles from '../components/templates/AuditPageTemplate/audit.module.scss'
-import LabelList from '../components/organisms/LabelList'
-import ProjectHeader from '../components/organisms/ProjectHeader'
+import LabelList from '../components/organisms/audit/LabelList'
+import ProjectHeader from '../components/organisms/project/ProjectHeader'
 
 class AuditSelect extends Component {
   constructor() {

@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 import AuditPageTemplate from '../../components/templates/AuditPageTemplate'
 import LearnPageTemplate from '../../components/templates/LearnPageTemplate'
-import ProjectHeader from '../../components/organisms/ProjectHeader/ProjectHeader'
+import ProjectHeader from '../../components/organisms/project/ProjectHeader'
 
 const ProjectPage = () => {
   const router = useRouter()

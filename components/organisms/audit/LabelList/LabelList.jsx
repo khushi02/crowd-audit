@@ -3,7 +3,7 @@ import _ from 'lodash'
 import React from 'react'
 import { Box, makeStyles } from '@material-ui/core'
 
-import LabelChip from '../../molecules/LabelChip'
+import LabelChip from '../../../molecules/LabelChip'
 
 const labels = ['GUN', 'BLACK', 'DANGER', 'CRIME', 'POINT', 'HARM', 'PLANT', 'WINDOW', 'DUTY', 'DISTANCE']
 
@@ -19,7 +19,7 @@ const LabelList = ({ selectedLabel }) => {
   return (
     <>
       {_.map(labels, (label, i) => (
-        <Box className={classNames.box} key={`chip-${i}`}>
+        <Box className={classes.box} key={`chip-${i}`}>
           <LabelChip
             clickable
             label={`<${label}>`}

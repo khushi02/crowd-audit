@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Grid, makeStyles } from '@material-ui/core'
 import { Share } from '@material-ui/icons'
 
-import CustomText from '../../atoms/CustomText'
+import CustomText from '../../../atoms/CustomText'
 
 const useStyles = makeStyles(() => ({
   box: {
