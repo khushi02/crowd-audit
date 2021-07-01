@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {useRef} from 'react'
+import ReactDOM from 'react-dom'
 import { Image } from 'react-bootstrap'
 import { Box, makeStyles } from '@material-ui/core'
+import FormControl from 'react-bootstrap/FormControl'
 
 import CustomText from '../../../atoms/CustomText'
 import RedirectionButton from '../../../molecules/RedirectionButton'
@@ -30,38 +32,47 @@ const useStyles = makeStyles(() => ({
   }
 }))
 
-const AuditStart = () => {
+const LabelStart = () => {
   const classes = useStyles()
+
+  const textInput = useRef(null)
+  
+  function handleEnter() {
+    var buttonText = textInput.current.value
+    var button = document.createElement('button')
+    button.textContent = buttonText
+    document.getElementById('labels').appendChild(button)
+  }
 
   return (
     <>
       <Box className={classes.box1}>
         <CustomText
-          fontSize="1rem"
-          fontWeight="400"
-          text="Google’s Algorithm scans the images to generate labels that describe the whole image."
+          fontSize="2rem"
+          fontWeight="600"
+          color="#128F6E"
+          text="Observe the image and enter words that best describe the image"
         />
       </Box>
       <Box className={classes.box2}>
-        <CustomText
-          fontSize="1.25rem"
-          fontWeight="500"
-          text="Do any labels for this image seem biased or discriminatory in a way that negatively impact any group of people? "
-        />
+        <div>
+          <FormControl
+            ref={textInput}
+            type="text"
+            placeholder="Type a 1-5 word descriptor and press enter."
+            onKeyPress={(e) => {(e.key === 'Enter' ? handleEnter() : null)}}
+          />
+        </div>
       </Box>
-      <Box className={classes.box3} display="flex">
-        <Image className={classes.image1} fluid src="/arrow.png" />
-        <CustomText color="#128F6E" fontSize="1.25rem" fontWeight="700" text="Select Labels to report" />
+      <Box className={classes.box3}>
+        <div id="labels"></div>
       </Box>
       <Box className={classes.box4}>
-        <Box>
-          <Image className={classes.image2} src="/nextImage.png" />
-        </Box>
         <RedirectionButton
           fontSize="1rem"
           fontWeight="500"
           height="2.125rem"
-          text="Skip to Next Image"
+          text="Submit and Next"
           width="11.25rem"
         />
       </Box>
@@ -69,6 +80,6 @@ const AuditStart = () => {
   )
 }
 
-export default AuditStart
+export default LabelStart
 
 

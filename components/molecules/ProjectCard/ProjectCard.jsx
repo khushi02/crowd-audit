@@ -60,10 +60,12 @@ const ProjectCard = ({ image, title, description }) => {
             <RedirectionButton
               fontSize="0.875rem"
               fontWeight="700"
-              height="2.227rem"
+              //height="2.227rem"
+              height="3.75rem"
               link="/project/learn"
               text="View Project"
-              width="6.665rem"
+              //width="6.665rem"
+              width="7.5rem"
             />
           </Box>
         </Box>

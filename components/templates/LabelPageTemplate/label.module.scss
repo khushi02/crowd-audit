@@ -1,0 +1,138 @@
+.contentWrap {
+    padding-bottom: 150px;
+    position: relative;
+  }
+  
+  .auditContainer {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  .projectDesc {
+    width: 50%;
+  }
+  
+  .landingContainer1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 40px;
+    background-color: #d2e2d9;
+  }
+  
+  .auditBarLeft {
+    grid-template: 1;
+    padding-top: 8px;
+    //padding-bottom: 40px;
+    //padding-right: 40px;
+  }
+  
+  .auditBarRight {
+    grid-template: 2;
+    text-align: right;
+    padding-top: 8px;
+    margin-left: 20px;
+    margin-right: 60px;
+  }
+  
+  .auditBarText {
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 20px;
+    //padding-top: 5px;
+  }
+  
+  .auditContainer img {
+    height: 450px;
+    width: auto;
+  }
+  
+  .question {
+    color: #128f6e;
+    line-height: 1.6;
+  }
+  
+  .arrow {
+    color: #128f6e;
+  }
+  
+  .buttonContainer {
+    position: relative;
+  }
+  
+  .cardButton {
+    width: 200px;
+    background: #128f6e;
+    border-radius: 10px;
+    border: #128f6e;
+    font-size: 18px;
+    line-height: 36px;
+    color: #fafafa;
+  }
+  
+  .internalContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: auto;
+  }
+  
+  .labelsCol1 {
+    grid-template: 1;
+    text-align: left;
+    padding-top: 40px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .labelsCol2 {
+    grid-template: 2;
+    text-align: left;
+    padding-top: 40px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .reportedLabel {
+    background: rgba(18, 143, 110, 0.15);
+    border-radius: 20px;
+    font-size: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .buttonsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    vertical-align: bottom;
+  }
+  
+  .auditRecords {
+    grid-template: 1;
+    text-align: left;
+    padding-top: 40px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .nextImage {
+    grid-template: 3;
+    padding-top: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .nextImage img {
+    width: 200px;
+    height: auto;
+    padding-bottom: 5%;
+  }
+  
+  .modal img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
