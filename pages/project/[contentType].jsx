@@ -5,6 +5,7 @@ import AuditPageTemplate from '../../components/templates/AuditPageTemplate'
 import LearnPageTemplate from '../../components/templates/LearnPageTemplate'
 import LabelPageTemplate from '../../components/templates/LabelPageTemplate'
 import ProjectHeader from '../../components/organisms/project/ProjectHeader'
+import AuditSearchTemplate from '../../components/templates/AuditSearchTemplate'
 
 const ProjectPage = () => {
   const router = useRouter()
@@ -14,6 +15,8 @@ const ProjectPage = () => {
       case 'learn':
         return <LearnPageTemplate />
       case 'audit':
+        return <AuditSearchTemplate />
+      case 'audit2':
         return <AuditPageTemplate />
       case 'label':
         return <LabelPageTemplate />
