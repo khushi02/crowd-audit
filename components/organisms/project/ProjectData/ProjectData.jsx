@@ -1,12 +1,14 @@
+import { Box, Grid } from '@material-ui/core'
 import _ from 'lodash'
 
 import React from 'react'
 
 import StatPaper from '../../../molecules/StatPaper'
 
-const ProjectData = () => {
+function ProjectData() {
   return (
-    <>
+    <div>
+      <Box display="flex" flexWrap="wrap" justifyContent="space-evenly">
       {_.map(
         [
           { label: 'Auditors', value: 3490 },
@@ -16,10 +18,13 @@ const ProjectData = () => {
           { label: 'Discussions Posted', value: 1569 }
         ],
         ({ label, value }, i) => (
-          <StatPaper icon={`/projectStat${i + 1}.png`} key={`paper-${label}`} label={label} value={value} />
+          <Box>
+            <StatPaper icon={`/projectStat${i + 1}.png`} key={`paper-${label}`} label={label} value={value} />
+          </Box>
         )
       )}
-    </>
+      </Box>
+    </div>
   )
 }
 
