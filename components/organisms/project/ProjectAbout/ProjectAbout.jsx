@@ -8,12 +8,15 @@ import CustomText from '../../../atoms/CustomText'
 import RedirectionButton from '../../../molecules/RedirectionButton'
 
 const useStyles = makeStyles(() => ({
+  root: {
+    flexGrow: 1,
+  },
   gridItemLeft: {
     paddingRight: '6.375rem'
   },
   imageBox: {
     height: '11.688rem',
-    width: '11.688rem'
+    width: '11.688rem',
   },
   imagesContainer: {
     marginTop: '3.375rem'
@@ -23,16 +26,16 @@ const useStyles = makeStyles(() => ({
   },
   topContainer: {
     marginBottom: '3.625rem'
-  }
-}))
+  },
+}));
 
-const ProjectAbout = () => {
-  const classes = useStyles()
+function ProjectAbout() {
+  const classes = useStyles();
 
   return (
-    <>
-      <Grid className={classes.topContainer} container>
-        <Grid item xs={6}>
+      <div className={classes.root}>
+        <Grid className={classes.topContainer} container spacing={1}>
+        <Grid item xs={6} className={classes.gridItemLeft}>
           <Box display="flex" justifyContent="flex-start">
             <CustomText
               color="#128F6E"
@@ -55,7 +58,7 @@ const ProjectAbout = () => {
           </Box>
         </Grid>
       </Grid>
-      <Grid container>
+      <Grid container spacing={1}>
         <Grid className={classes.gridItemLeft} item xs={6}>
           <Box className={classes.textBox}>
             <CustomText fontSize="1.25rem" fontWeight="700" text="What is this project about?" />
@@ -74,7 +77,7 @@ const ProjectAbout = () => {
           />
         </Grid>
         <Grid item xs={6}>
-          <Box className={classes.imagesContainer} display="flex" flexWrap="wrap" justifyContent="space-between">
+          <Box className={classes.imagesContainer} display="flex" flexWrap="wrap" justifyContent="space-evenly">
             {_.map(['projectAbout1', 'projectAbout2', 'projectAbout3'], (filename, i) => (
               <Box className={classes.imageBox} key={`img-${i}`}>
                 <Image fluid src={`/${filename}.png`} />
@@ -83,8 +86,8 @@ const ProjectAbout = () => {
           </Box>
         </Grid>
       </Grid>
-    </>
-  )
+      </div>
+  );
 }
 
-export default ProjectAbout
+export default ProjectAbout;

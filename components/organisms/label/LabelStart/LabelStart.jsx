@@ -1,7 +1,7 @@
 import React, {useRef} from 'react'
 import ReactDOM from 'react-dom'
 import { Image } from 'react-bootstrap'
-import { Box, makeStyles } from '@material-ui/core'
+import { Box, Chip, makeStyles } from '@material-ui/core'
 import FormControl from 'react-bootstrap/FormControl'
 
 import CustomText from '../../../atoms/CustomText'
@@ -29,6 +29,20 @@ const useStyles = makeStyles(() => ({
     margin: 'auto auto 1.375rem auto',
     maxHeight: '100%',
     maxWidth: '100%'
+  },
+  chip: {
+    borderRadius: '1.25rem',
+    color: '#4F4F4F',
+    fontFamily: 'Roboto',
+    fontSize: '1rem',
+    fontWeight: '400',
+    margin: '0.1rem 0',
+    padding: '0.429rem 0',
+    '&:hover': {
+      color: '#4F4F4F',
+      cursor: 'pointer',
+      textDecoration: 'none'
+    }
   }
 }))
 
@@ -36,12 +50,20 @@ const LabelStart = () => {
   const classes = useStyles()
 
   const textInput = useRef(null)
+
+  const handleDelete = () => {
+    console.info('You clicked the delete icon.');
+  };
   
   function handleEnter() {
     var buttonText = textInput.current.value
-    var button = document.createElement('button')
-    button.textContent = buttonText
-    document.getElementById('labels').appendChild(button)
+    //var chip = document.createElement('Chip')
+    // chip.setAttribute('label', buttonText)
+    // chip.setAttribute('onDelete', {handleDelete})
+    // chip.setAttribute('color', 'primary')
+    const chip = <Chip label="Test" onDelete={handleDelete} color="#4F4F4F"/>
+    ReactDOM.render(chip, document.getElementById('labels'))
+    //document.getElementById('labels').appendChild(chip)
   }
 
   return (
