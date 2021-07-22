@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
 import ReactDOM from 'react-dom'
 import { Image } from 'react-bootstrap'
 import { Box, Chip, makeStyles } from '@material-ui/core'
@@ -49,6 +49,8 @@ const useStyles = makeStyles(() => ({
 const LabelStart = () => {
   const classes = useStyles()
 
+  const [labels, setLabels] = useState(["Test"])
+
   const textInput = useRef(null)
 
   const handleDelete = () => {
@@ -56,14 +58,12 @@ const LabelStart = () => {
   };
   
   function handleEnter() {
-    var buttonText = textInput.current.value
-    //var chip = document.createElement('Chip')
-    // chip.setAttribute('label', buttonText)
-    // chip.setAttribute('onDelete', {handleDelete})
-    // chip.setAttribute('color', 'primary')
-    const chip = <Chip label="Test" onDelete={handleDelete} color="#4F4F4F"/>
+    var chipText = textInput.current.value
+    const chip = <Chip label={chipText} id="chip_id" onDelete={handleDelete} color="#4F4F4F"/>
     ReactDOM.render(chip, document.getElementById('labels'))
-    //document.getElementById('labels').appendChild(chip)
+    
+    // const newData = textInput.current.value
+    // setLabels(prevState => [...prevState, newData])
   }
 
   return (
@@ -87,7 +87,11 @@ const LabelStart = () => {
         </div>
       </Box>
       <Box className={classes.box3}>
-        <div id="labels"></div>
+        <div id="labels">
+        {/* {labels.map(l => {
+          <Chip label={l} onDelete={handleDelete} color="#4F4F4F"/>
+        })} */}
+        </div>
       </Box>
       <Box className={classes.box4}>
         <RedirectionButton

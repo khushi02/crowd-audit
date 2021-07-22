@@ -48,7 +48,7 @@ const ProjectHeader = ({ contentType }) => {
       </Grid>
       <Grid item xs={6}>
         <Box className={classes.box} display="flex" justifyContent="flex-end">
-          {_.map(['Learn', 'Audit', 'Label', 'Discuss'], (text) => {
+          {_.map(['Learn', 'Audit', 'Label', 'Discussion'], (text) => {
             const lowerCased = text.toLowerCase()
             return (
               <UnderlinedButton
