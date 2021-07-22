@@ -6,6 +6,7 @@ import ProjectAbout from '../../organisms/project/ProjectAbout'
 import ProjectData from '../../organisms/project/ProjectData'
 import ProjectDescription from '../../organisms/project/ProjectDescription'
 import ProjectProgress from '../../organisms/project/ProjectProgress'
+import ProjectIssues from '../../organisms/project/ProjectIssues'
 
 const useStyles = makeStyles(() => ({
   aboutContainer: {
@@ -16,9 +17,14 @@ const useStyles = makeStyles(() => ({
     padding: '4.125rem 5.75rem 5.938rem 4.375rem'
   },
   dataContainer: {
+    backgroundColor: '#E5E5E5',
+    padding: '3.625rem 6.875rem 6.813rem 6.875rem'
+  },
+  issuesContainer: {
     padding: '3.625rem 6.875rem 6.813rem 6.875rem'
   },
   descriptionContainer: {
+    backgroundColor: '#E5E5E5',
     padding: '5.5rem 5.75rem 3.625rem 4.375rem'
   }
 }))
@@ -42,6 +48,9 @@ const LearnPageTemplate = () => {
       </Grid>
       <Box className={classes.dataContainer} display="flex" flexWrap="wrap" justifyContent="space-between">
         <ProjectData />
+      </Box>
+      <Box className={classes.issuesContainer} container>
+        <ProjectIssues />
       </Box>
     </>
   )

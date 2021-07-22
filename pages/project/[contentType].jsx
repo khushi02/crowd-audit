@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import AuditPageTemplate from '../../components/templates/AuditPageTemplate'
 import LearnPageTemplate from '../../components/templates/LearnPageTemplate'
 import LabelPageTemplate from '../../components/templates/LabelPageTemplate'
+import DiscussPageTemplate from '../../components/templates/DiscussPageTemplate'
 import ProjectHeader from '../../components/organisms/project/ProjectHeader'
 
 const ProjectPage = () => {
@@ -18,7 +19,7 @@ const ProjectPage = () => {
       case 'label':
         return <LabelPageTemplate />
       case 'discuss':
-        return null
+        return <DiscussPageTemplate />
     }
   }
 
