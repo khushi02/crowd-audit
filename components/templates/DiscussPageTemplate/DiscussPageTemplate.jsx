@@ -2,15 +2,15 @@ import React from 'react'
 import { Image } from 'react-bootstrap'
 import { Box, Grid, makeStyles } from '@material-ui/core'
 
-import LabelImageHeader from '../../organisms/label/LabelImageHeader'
-import LabelImageTitle from '../../organisms/label/LabelImageTitle'
-import LabelStart from '../../organisms/label/LabelStart/LabelStart'
-import CustomText from '../../atoms/CustomText'
-import LabelList from '../../organisms/label/LabelList'
+import IssuesList from '../../organisms/discussion/IssuesList'
+import IssueDescription from '../../organisms/discussion/IssueDescription'
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   background: {
     backgroundColor: '#FAFAFA'
+  },
+  leftBar: {
+    backgroundColor: theme.palette.background.paper,
   },
   bottomBox: {
     height: '5.625rem'
@@ -39,25 +39,18 @@ const DiscussPageTemplate = () => {
 
   return (
     <>
-      <Grid className={classes.container} container>
-        <Grid item xs={6}>
-          <LabelImageTitle canShare imageId={234} numImages={5043} />
+      <Grid container>
+        <Grid item xs={3} className={classes.leftBar}>
           <Grid container>
-            <Grid className={classes.background} item xs={9}>
-              <LabelImageHeader />
-              <Image className={classes.image} fluid src="/auditImage.png" />
-            </Grid>
-            <Grid item xs>
-              <Box className={classes.box}>
-                <CustomText color="#128F6E" fontSize="1rem" fontWeight="700" text="Labels" />
-              </Box>
-              <LabelList />
-            </Grid>
+            <IssuesList />
           </Grid>
           <Box className={`${classes.background} ${classes.bottomBox}`} />
         </Grid>
-        <Grid className={classes.rightGridItem} item xs>
-          <LabelStart />
+        <Grid className={classes.rightGridItem} item xs={9}>
+          <Grid item>
+            <IssueDescription />
+          </Grid>
+          {/* <LabelStart /> */}
           <Box className={classes.bottomBox} />
         </Grid>
       </Grid>
