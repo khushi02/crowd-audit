@@ -49,8 +49,6 @@ const useStyles = makeStyles(() => ({
 const LabelStart = () => {
   const classes = useStyles()
 
-  const [labels, setLabels] = useState(["Test"])
-
   const textInput = useRef(null)
 
   const handleDelete = () => {

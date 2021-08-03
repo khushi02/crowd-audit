@@ -35,7 +35,7 @@ const ProjectHeader = ({ contentType }) => {
 
   return (
     <Grid className={classes.container} container>
-      <Grid item xs={6}>
+      <Grid item xs={4}>
         <Box className={classes.box} display="flex" justifyContent="flex-start">
           <Link href="/projects">
             <NavigateBeforeOutlined className={classes.navigateIcon} />
@@ -46,9 +46,9 @@ const ProjectHeader = ({ contentType }) => {
           </Box>
         </Box>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={8}>
         <Box className={classes.box} display="flex" justifyContent="flex-end">
-          {_.map(['Learn', 'Audit', 'Label', 'Discussion'], (text) => {
+          {_.map(['Learn', 'Audit', 'Label', 'Discuss'], (text) => {
             const lowerCased = text.toLowerCase()
             return (
               <UnderlinedButton
