@@ -50,7 +50,7 @@ const LearnPageTemplate = () => {
         <ProjectData />
       </Box>
       <Box className={classes.issuesContainer} container>
-        <ProjectIssues />
+      <ProjectIssues />
       </Box>
     </>
   )
