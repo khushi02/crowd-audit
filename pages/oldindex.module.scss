@@ -1,0 +1,194 @@
+.contentWrap {
+  position: relative;
+  background-color: #ffffff;
+}
+
+.landingContainer1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.imgCont {
+  grid-template: 2;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  text-align: right;
+}
+
+.imgCont img {
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.textCont {
+  grid-template: 1;
+  text-align: left;
+  padding-top: 40px;
+  margin-right: 80px;
+  margin-left: 120px;
+  font-size: 12px;
+}
+
+.heading {
+  margin-top: 12%;
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(29, 142, 111);
+}
+
+.headingCenter {
+  margin-top: 3%;
+  margin-bottom: 2%;
+  font-size: 28px;
+  font-weight: 600;
+  color: rgb(29, 142, 111);
+  text-align: center;
+}
+
+.headingDesc {
+  margin-top: 7%;
+  font-size: 28px;
+  font-weight: 600;
+  color: rgb(79, 79, 79);
+}
+
+.desc {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(79, 79, 79);
+  text-align: center;
+  max-width: 55%;
+  margin: 0 auto;
+}
+
+.coloredBackground {
+  height: 70%;
+  background-color: rgb(245, 249, 247);
+}
+
+.coloredBackground img {
+  margin: auto;
+  display: block;
+}
+
+.nonColoredBackground {
+  height: 70%;
+  margin-top: 2%;
+}
+
+.landingContainer2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  grid-auto-rows: 200px;
+  grid-template-areas: '. a b c .';
+  margin-top: 3%;
+  margin-bottom: 10%;
+}
+
+.item1 {
+  grid-area: a;
+  align-self: center;
+  justify-self: center;
+  width: 90%;
+  height: 90%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.item2 {
+  grid-area: b;
+  align-self: center;
+  justify-self: center;
+  width: 90%;
+  height: 90%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.item3 {
+  grid-area: c;
+  align-self: center;
+  justify-self: center;
+  width: 90%;
+  height: 90%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.headerCardButton {
+  width: 210px;
+  margin-top: 8%;
+  background: #128f6e;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 36px;
+  color: #fafafa;
+}
+
+.projectCardButton {
+  width: 180px;
+  margin-top: 8%;
+  background: #128f6e;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 36px;
+  color: #fafafa;
+}
+
+.impactCardButton {
+  width: 180px;
+  background: #128f6e;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 36px;
+  color: #fafafa;
+}
+
+.section3 {
+  text-align: center;
+}
+
+.section3 img {
+  padding-top: 6%;
+  padding-bottom: 6%;
+  max-width: 80%;
+  max-height: 70%;
+  margin: auto;
+  display: block;
+}
+
+.section4 {
+  text-align: center;
+  padding-bottom: 4%;
+}
+
+.section4 img {
+  padding-top: 6%;
+  padding-bottom: 2%;
+  max-width: 80%;
+  max-height: 70%;
+  margin: auto;
+  display: block;
+}
+
+.section5 {
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+.section5 img {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  max-width: 80%;
+  max-height: 70%;
+  margin: auto;
+  display: block;
+}
