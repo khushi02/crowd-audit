@@ -21,6 +21,10 @@ const useStyles = makeStyles(() => ({
     '&:hover': {
       cursor: 'pointer'
     }
+  },
+  textInput: {
+    height:'2rem',
+    width: '16rem'
   }
 }))
 
@@ -29,32 +33,26 @@ const PageNavigation = () => {
 
   return (
     <Grid className={classes.container} container>
-      <Grid item xs={6}>
+      <Grid item xs={2}>
         <Box className={classes.box} display="flex" justifyContent="flex-start">
           <Box className={classes.imageBox}>
             <Link href="/">
               <Image fluid src="/logo1.png" />
             </Link>
           </Box>
-          {_.map(['Projects', 'FAQ', 'About'], (text) => {
-            const lowerCased = text.toLowerCase()
-            return <NavigationButton key={`btn-${lowerCased}`} link={`/${lowerCased}`} text={text} />
-          })}
         </Box>
       </Grid>
       <Grid item xs={6}>
+        <Box className={classes.box} >
+          <input className={classes.textInput} placeHolder="Search crowd audits"></input>
+        </Box>
+      </Grid>
+      <Grid item xs={3}>
         <Box className={classes.box} display="flex" justifyContent="flex-end">
-          {_.map(['Login', 'Register'], (text) => {
-            const lowerCased = text.toLowerCase()
-            return (
-              <NavigationButton
-                emphasized={text === 'Register'}
-                key={`btn-${lowerCased}`}
-                link={`/${lowerCased}`}
-                text={text}
-              />
-            )
-          })}
+        {_.map(['Home', 'Discussions', 'Projects', 'About', 'FAQ', 'Profile'], (text) => {
+          const lowerCased = text.toLowerCase()
+          return <NavigationButton key={`btn-${lowerCased}`} link={`/${lowerCased}`} text={text} />
+        })}
         </Box>
       </Grid>
     </Grid>
