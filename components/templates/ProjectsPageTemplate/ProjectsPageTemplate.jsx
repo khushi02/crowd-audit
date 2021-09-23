@@ -12,6 +12,7 @@ const useStyles = makeStyles(() => ({
     margin: '8.25rem 4.813rem 4.063rem 6.938rem '
   },
   cardBox: {
+    backgroundColor: '#E5E5E5',
     marginTop: '2rem'
   }
 }))

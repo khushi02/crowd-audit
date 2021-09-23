@@ -25,7 +25,6 @@
     "node": "^10.24.1",
     "node-sass": "^6.0.1",
     "popper.js": "^1.16.1",
-<<<<<<< HEAD
     "prettier": "^2.3.1",
     "react": "^16.14.0",
     "react-bootstrap": "^1.6.1",
@@ -34,16 +33,6 @@
     "react-is": "^16.8.0",
     "react-redux": "^7.2.3",
     "redux": "^4.0.5",
-=======
-    "prettier": "^2.4.0",
-    "react": "^16.9.0",
-    "react-bootstrap": "^1.6.3",
-    "react-bootstrap-validation": "^0.1.11",
-    "react-dom": "^16.9.0",
-    "react-is": "^16.13.1",
-    "react-redux": "^7.2.5",
-    "redux": "^4.1.1",
->>>>>>> dce4f904514ddd97d1a81f50006c39f447a77330
     "remove": "^0.1.5",
     "sass": "^1.39.0",
     "styled-components": "^5.3.1",
