@@ -50,7 +50,7 @@ const PageNavigation = () => {
       <Grid item xs={3}>
         <Box className={classes.box} display="flex" justifyContent="flex-end">
         {_.map(['Home', 'Discussions', 'Projects', 'About', 'FAQ', 'Profile'], (text) => {
-          const lowerCased = text.toLowerCase()
+          const lowerCased = text=='Home' ? '' : text.toLowerCase()
           return <NavigationButton key={`btn-${lowerCased}`} link={`/${lowerCased}`} text={text} />
         })}
         </Box>

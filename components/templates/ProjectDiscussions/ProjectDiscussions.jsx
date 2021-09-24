@@ -2,7 +2,6 @@ import _ from 'lodash'
 
 import React from 'react'
 import { Box, makeStyles, Grid } from '@material-ui/core'
-
 import Link from 'next/link'
 import DiscussionCollection from '../../molecules/DiscussionCollection'
 import DiscussionLabels from '../../molecules/DiscussionLabels'
@@ -36,6 +35,12 @@ const useStyles = makeStyles(() => ({
     margin: '0.875rem 1.375rem',
     marginTop: '3.5rem'
   },
+  button: {
+    alignItems: 'center',
+    margin: '0.875rem 1.375rem',
+    marginTop: '3.5rem',
+
+  },
   textInput: {
     height:'2rem',
     width: '16rem'
@@ -53,7 +58,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-const DiscussCollectionPageTemplate = () => {
+const ProjectDiscussionsTemplate = () => {
   const classes = useStyles()
 
   return (
@@ -63,28 +68,35 @@ const DiscussCollectionPageTemplate = () => {
       <Box className={classes.headerBox}>
         <CustomText fontSize="1.25rem" fontWeight="600" text="Discussion Forum" />
         <Box className={classes.subtitle}>
-            <CustomText color="green" fontSize=".75rem" fontWeight="600" text="All Collections"/>
+        <Link href="/discussions">
+          <a>All Collections > Project Specific</a>
+        </Link>
         </Box>
       </Box>
       </Grid>
-      <Grid item xs={7}>
+      <Grid item xs={5}>
         <Box className={classes.search} >
           <input className={classes.textInput} placeHolder="Search crowd audits"></input>
+        </Box>
+      </Grid>
+      <Grid item xs={1}>
+        <Box className={classes.button} >
+          <button>New Thread</button>
         </Box>
       </Grid>
     </Grid>
     <Grid container>
       <Grid item xs={8}>
         <Box className={classes.box}>
-          {_.map(collectionData, ({ title, description }, i) => (
-            <Link href="/projectdiscussions">
-              <Box className={classes.cardBox} key={`collection-${i}`}>
-                <DiscussionCollection title={title} description={description} />
-              </Box>
-            </Link>
-
-          ))}
+          <img src="/discussionbox.png"/>
         </Box>
+        <Box className={classes.box}>
+          <img src="/discussionbox.png"/>
+        </Box>
+        <Box className={classes.box}>
+          <img src="/discussionbox.png"/>
+        </Box>
+
       </Grid>
       <Grid item xs={4}>
         <Box className={classes.labelBox}>
@@ -114,4 +126,4 @@ const DiscussCollectionPageTemplate = () => {
   )
 }
 
-export default DiscussCollectionPageTemplate
+export default ProjectDiscussionsTemplate
