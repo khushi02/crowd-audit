@@ -21,6 +21,9 @@ const useStyles = makeStyles(() => ({
     marginBottom: '3rem',
     marginTop: '1.25rem'
   },
+  titleBox: {
+    marginTop: '3rem'
+  },
   middleBox: {
     paddingLeft: '2.5rem',
     paddingRight: '15.25rem'
@@ -31,9 +34,6 @@ const useStyles = makeStyles(() => ({
   //   position: 'relative',
   //   width: '100%'
   // },
-  titleBox: {
-    marginTop: '3rem'
-  }
 }))
 
 const DiscussionCollection = ({ title, description }) => {
