@@ -18,7 +18,7 @@ const useStyles = makeStyles(() => ({
     marginLeft: '15%'
   },
   box: {
-    margin: '5rem 18rem 4rem 16rem '
+    margin: '5rem 18rem 4rem 7rem '
   },
   labelBox: {
     backgroundColor: '#E5E5E5',
@@ -51,8 +51,7 @@ const useStyles = makeStyles(() => ({
   },
   descriptionBox: {
     margin: '1rem 2rem 3rem 3rem ',
-    paddingTop: '0.5rem',
-    paddingBottom: '0.5rem'
+    paddingTop: '0.5rem'
   },
   titleBox: {
     marginTop: '3rem',
@@ -62,6 +61,10 @@ const useStyles = makeStyles(() => ({
     marginBottom: '2rem',
     marginRight: '2rem'
   },
+
+  name: {
+    paddingLeft: '2rem'
+  }
 }))
 
 const DiscussCollectionPageTemplate = () => {
@@ -71,12 +74,16 @@ const DiscussCollectionPageTemplate = () => {
     <>
     <Grid container>
       <Box className={classes.headerBox}>
-        <div>
+        <div style={{float:'left'}}>
         <img src="/profpic.png" alt="First slide" width="70" height="70" />
+        <h2 className={name}>Riya Ray</h2>
+        </div>
+        <div style={{float:'right',  marginLeft:'40rem'}}>
+          <img src="/pointsBar.png" alt = "First slide" width="480" height="60"/>
         </div>
       </Box>
     </Grid>
-    
+
     <Grid container>
       <Grid item xs={12}>
         <Box className={classes.box}>
@@ -115,9 +122,23 @@ const DiscussCollectionPageTemplate = () => {
           </Box>
           </Grid>
         </Grid>
+        <Grid className={classes.container} container>
+          <div>
+            <img src="/engagement.png" alt = "First slide"/>
+          </div>
+        </Grid>
+        <Grid className={classes.container} container>
+          <div>
+            <img src="/personalinfo.png" alt = "First slide"/>
+          </div>
+        </Grid>
+
         </Box>
+
       </Grid>
+
     </Grid>
+
     </>
   )
 }
