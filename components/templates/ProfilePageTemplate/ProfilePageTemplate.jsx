@@ -76,9 +76,11 @@ const DiscussCollectionPageTemplate = () => {
       <Box className={classes.headerBox}>
         <div style={{float:'left'}}>
         <img src="/profpic.png" alt="First slide" width="70" height="70" />
-        <h2 className={name}>Riya Ray</h2>
         </div>
-        <div style={{float:'right',  marginLeft:'40rem'}}>
+        <div  style={{padding:'20px', paddingLeft:'0px',float:'left'}}>
+        <h2 className={classes.name}>Riya Ray</h2>
+        </div>
+        <div style={{float:'right',  marginLeft:'20rem'}}>
           <img src="/pointsBar.png" alt = "First slide" width="480" height="60"/>
         </div>
       </Box>
