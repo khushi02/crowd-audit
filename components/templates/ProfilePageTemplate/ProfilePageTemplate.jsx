@@ -81,7 +81,7 @@ const DiscussCollectionPageTemplate = () => {
         <h2 className={classes.name}>Riya Ray</h2>
         </div>
         <div style={{float:'right',  marginLeft:'20rem'}}>
-          <img src="/pointsBar.png" alt = "First slide" width="480" height="60"/>
+          <img src="/pointsBar.PNG" alt = "First slide" width="480" height="60"/>
         </div>
       </Box>
     </Grid>
